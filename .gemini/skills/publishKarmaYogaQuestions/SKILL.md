@@ -5,11 +5,11 @@ description: Automatically publish and deploy updates to the KarmaYogaQuestionsD
 
 # Karma Yoga Questions Publisher Skill (`publishKarmaYogaQuestions`)
 
-This skill automates the deployment of the Karma Yoga Questions & Discussions website to GitHub Pages when local changes are committed.
+This skill automates the deployment of the Karma Yoga QuestionsDiscussions website to GitHub Pages when local changes are committed.
 
 ## Project Details
 * **Local Path:** `/home/sabrisatharamanathan/my-project/KarmaYoga`
-* **Entry File:** `index.html` & `Karmayoga-Questions-Discussion.html`
+* **Entry File:** `index.html``Karmayoga-Questions-Discussion.html`
 * **GitHub Repository:** `git@github.com:karmayogabg/KarmaYogaQuestionsDiscusssions.git`
 * **Deploy Target:** GitHub Pages (`main` branch)
 
@@ -17,7 +17,7 @@ This skill automates the deployment of the Karma Yoga Questions & Discussions we
 
 When the user asks to publish or deploy the page, execute the following commands in `/home/sabrisatharamanathan/my-project/KarmaYoga`:
 
-1. **Verify git status & stage changes:**
+1. **Verify git statusstage changes:**
    ```bash
    git status
    git add .
@@ -25,7 +25,7 @@ When the user asks to publish or deploy the page, execute the following commands
 
 2. **Commit changes:**
    ```bash
-   git commit -m "Update website content & questions data"
+   git commit -m "Update website contentquestions data"
    ```
 
 3. **Push to GitHub:**

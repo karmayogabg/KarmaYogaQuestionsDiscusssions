@@ -9,7 +9,7 @@ This skill automates the deployment of the Karma Yoga Questions, Answers, and Tr
 
 ## Project Specifications
 * **Workspace Path**: `/home/sabrisatharamanathan/my-project/KarmaYoga`
-* **Primary HTML App**: `index.html` & `Karmayoga-Questions-Discussion.html`
+* **Primary HTML App**: `index.html``Karmayoga-Questions-Discussion.html`
 * **Backend Database**: `questions_data.json`
 * **CI/CD Config**: `.gitlab-ci.yml` (Configured for GitLab Pages)
 
@@ -56,7 +56,7 @@ git push gitlab main
 
 ---
 
-## Deliverables & Verification Checklist
+## DeliverablesVerification Checklist
 - Verify `.gitlab-ci.yml` is present in the workspace.
 - Confirm `git push gitlab main` completes with exit code 0.
 - Output the live GitLab Pages link to the user.
