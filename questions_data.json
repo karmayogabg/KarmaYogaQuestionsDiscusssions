@@ -1,3 +1,11 @@
 {
-  "test": "ok"
+  "test": "ok",
+  "transcripts": [
+    {
+      "id": "Karma_Yoga_Meeting_Recording_(Jul_27,_2026)",
+      "title": "Karma Yoga Meeting Recording (Jul 27, 2026)",
+      "file": "Karma Yoga Meeting Recording (Jul 27, 2026).txt",
+      "date": "2026-07-28"
+    }
+  ]
 }
