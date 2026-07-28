@@ -412,7 +412,7 @@ def update_questions_data_and_html(workspace_dir, base_name, full_transcript):
 </body>
 </html>'''
 
-    html_file = os.path.join(workspace_dir, "Karmayoga-Questions-Discussion.html")
+    html_file = os.path.join(workspace_dir, "index.html")
     index_file = os.path.join(workspace_dir, "index.html")
     
     with open(html_file, "w", encoding="utf-8") as f:
