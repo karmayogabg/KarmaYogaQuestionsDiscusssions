@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Karma Yoga Questions, Answers & Full Transcripts Repository Manager">
+    <title>கர்மா யோகா - கேள்வி பதில்கள் & விவாதங்கள் | Karmayoga Questions & Transcripts</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: rgba(30, 41, 59, 0.85);
+            
+            --accent-gold: #f59e0b;
+            --accent-gold-light: #fbbf24;
+            --accent-orange: #ea580c;
+            --accent-purple: #8b5cf6;
+            --accent-blue: #38bdf8;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            
+            --border-color: rgba(255, 255, 255, 0.12);
+            --border-highlight: rgba(245, 158, 11, 0.4);
+            --glass-bg: rgba(15, 23, 42, 0.85);
+            --shadow-glow: 0 10px 30px -10px rgba(245, 158, 11, 0.2);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Outfit', 'Noto Sans Tamil', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(245, 158, 11, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.08) 0%, transparent 40%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header {
+            padding: 35px 0 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.6) 0%, transparent 100%);
+        }
+
+        .badge-header {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            color: var(--accent-gold);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffffff 0%, #fbbf24 50%, #ea580c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 750px;
+            margin: 0 auto 20px;
+        }
+
+        /* Top Main View Navigation Tabs */
+        .view-tabs-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0 10px;
+        }
+
+        .main-tab-btn {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .main-tab-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+        }
+
+        .main-tab-btn.active {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-orange) 100%);
+            color: #000;
+            border-color: transparent;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+
+        /* View Section Containers */
+        .view-section { display: none; }
+        .view-section.active { display: block; animation: fadeIn 0.3s ease; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Action Toolbar */
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid var(--border-color);
+            padding: 15px 24px;
+            border-radius: 16px;
+            margin: 20px 0 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        .tool-group { display: flex; align-items: center; gap: 12px; }
+
+        .btn {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-orange) 100%);
+            color: #000;
+            font-weight: 600;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(245, 158, 11, 0.35);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: none;
+        }
+
+        /* Controls: Search & Topic Filter */
+        .controls-wrapper {
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+            margin-bottom: 30px;
+        }
+
+        .controls-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(16px);
+            border-radius: 20px;
+            padding: 18px 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .search-box { position: relative; width: 100%; }
+        .search-box i { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted); }
+        .search-input {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid var(--border-color);
+            padding: 12px 16px 12px 48px;
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            font-family: inherit;
+            outline: none;
+        }
+        .search-input:focus { border-color: var(--accent-gold); }
+
+        .filter-topics { display: flex; flex-wrap: wrap; gap: 8px; }
+        .topic-chip {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 7px 15px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            user-select: none;
+        }
+        .topic-chip.active {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-orange) 100%);
+            color: #000;
+            font-weight: 600;
+            border-color: transparent;
+        }
+
+        /* Question Cards & Topic Sections */
+        .topic-group { margin-bottom: 40px; }
+        .topic-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--accent-gold-light);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(245, 158, 11, 0.2);
+        }
+
+        .topic-title i {
+            background: rgba(245, 158, 11, 0.15);
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .questions-list { display: flex; flex-direction: column; gap: 20px; }
+
+        .question-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            transition: border-color 0.3s ease;
+        }
+
+        .question-card:hover { border-color: var(--border-highlight); }
+
+        .card-header {
+            padding: 20px 24px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            cursor: pointer;
+        }
+
+        .q-number {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-orange) 100%);
+            color: #000;
+            font-weight: 700;
+            min-width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+
+        .q-title-wrapper { flex-grow: 1; }
+        .q-title-ta { font-size: 1.15rem; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; }
+        .q-title-en { font-size: 0.95rem; color: var(--text-secondary); font-style: italic; }
+
+        .q-status-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .meta-badges { display: flex; gap: 10px; font-size: 0.8rem; align-items: center; }
+        .timestamp-badge {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-blue);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            padding: 3px 10px;
+            border-radius: 6px;
+        }
+
+        /* Discussion Status Toggle Button */
+        .status-toggle-btn {
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: var(--accent-red);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .status-toggle-btn.discussed {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: rgba(16, 185, 129, 0.3);
+            color: var(--accent-green);
+        }
+
+        .toggle-icon { color: var(--text-muted); font-size: 1.1rem; transition: transform 0.3s ease; }
+        .question-card.open .toggle-icon { transform: rotate(180deg); color: var(--accent-gold); }
+
+        /* Card Body & Answer Editor */
+        .card-body {
+            display: none;
+            padding: 0 24px 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(15, 23, 42, 0.5);
+        }
+
+        .question-card.open .card-body { display: block; }
+
+        .detail-block { margin-top: 18px; }
+        .detail-block-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .context-box {
+            background: rgba(30, 41, 59, 0.6);
+            border-left: 3px solid var(--accent-gold);
+            padding: 14px 18px;
+            border-radius: 0 10px 10px 0;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .transcript-snippet {
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            white-space: pre-wrap;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        /* Prominent Editable Answer Box */
+        .answer-editor-box {
+            background: rgba(30, 41, 59, 0.95);
+            border: 1.5px solid var(--border-highlight);
+            border-radius: 14px;
+            padding: 18px;
+            margin-top: 18px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group { margin-bottom: 14px; }
+        .form-group label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--accent-gold-light);
+            margin-bottom: 8px;
+        }
+
+        .answer-textarea {
+            width: 100%;
+            min-height: 90px;
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            padding: 12px 16px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            font-family: inherit;
+            outline: none;
+            resize: vertical;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .answer-textarea:focus {
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+        }
+
+        .save-card-btn {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-orange) 100%);
+            color: #000;
+            font-weight: 700;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        /* Transcript Viewer Section */
+        .transcript-repository-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        .transcript-selector-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .select-input {
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 10px 16px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            outline: none;
+            min-width: 320px;
+        }
+
+        .select-input:focus { border-color: var(--accent-gold); }
+
+        .transcript-content-viewer {
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            max-height: 600px;
+            overflow-y: auto;
+            font-family: 'Outfit', 'Noto Sans Tamil', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #e2e8f0;
+            white-space: pre-wrap;
+        }
+
+        .notification {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: var(--accent-green);
+            color: #000;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            display: none;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="badge-header">
+                <i class="fa-solid fa-dharmachakra"></i> பகவத் கீதை உபன்யாசம்
+            </div>
+            <h1>கர்மா யோகா - கேள்வி பதில்கள் & உரைப்பதிவுகள்</h1>
+            <p class="subtitle">Bhagavad Gita Karma Yoga - Interactive Questions, Answers, Discussion Tracker & Full Weekly Transcripts</p>
+
+            <!-- Main View Navigation Tabs -->
+            <div class="view-tabs-wrapper">
+                <button class="main-tab-btn active" id="tabQuestionsBtn" onclick="switchView('questions')">
+                    <i class="fa-solid fa-list-check"></i> கேள்வி பதில்கள் (Questions & Answers)
+                </button>
+                <button class="main-tab-btn" id="tabTranscriptsBtn" onclick="switchView('transcripts')">
+                    <i class="fa-solid fa-file-lines"></i> உரைப்பதிவுகள் Repository (Transcripts)
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- VIEW 1: QUESTIONS & ANSWERS -->
+        <div class="view-section active" id="viewQuestions">
+            <!-- Action Toolbar -->
+            <div class="toolbar">
+                <div class="tool-group">
+                    <span id="statsSummary" style="font-size: 0.95rem; color: var(--text-secondary);">
+                        <i class="fa-solid fa-circle-check" style="color: var(--accent-green);"></i> <strong id="discussedCount" style="color: var(--text-primary);">15</strong>/15 கேள்விகள் விவாதிக்கப்பட்டன
+                    </span>
+                </div>
+                <div class="tool-group">
+                    <button class="btn" onclick="saveData()"><i class="fa-solid fa-floppy-disk"></i> Save to Backend JSON</button>
+                    <button class="btn btn-secondary" onclick="resetData()"><i class="fa-solid fa-rotate-left"></i> Reset Defaults</button>
+                </div>
+            </div>
+
+            <!-- Sticky Controls: Search & Topic Filter -->
+            <div class="controls-wrapper">
+                <div class="controls-card">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="searchInput" class="search-input" placeholder="தேடுக (e.g. தண்டனை, Reincarnation, Tilak, பாவம்)...">
+                    </div>
+
+                    <div class="filter-topics" id="topicFilters">
+                        <!-- Dynamic Topic Chips -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Questions List Container -->
+            <div id="questionsContainer"></div>
+        </div>
+
+        <!-- VIEW 2: FULL TRANSCRIPTS REPOSITORY -->
+        <div class="view-section" id="viewTranscripts">
+            <div class="transcript-repository-card">
+                <div class="transcript-selector-row">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <i class="fa-solid fa-folder-open" style="font-size: 1.5rem; color: var(--accent-gold);"></i>
+                        <div>
+                            <h3 style="font-size: 1.2rem; color: var(--text-primary);">வாராந்திர உரைப்பதிவுகள் (Weekly Audio Transcripts)</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary);">Select and view the full audio transcription text</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <select id="transcriptSelect" class="select-input" onchange="loadSelectedTranscript()">
+                            <!-- Dynamic Transcript Options -->
+                        </select>
+                        <button class="btn btn-secondary" onclick="copyTranscriptText()"><i class="fa-solid fa-copy"></i> Copy Text</button>
+                    </div>
+                </div>
+
+                <div class="search-box" style="margin-bottom: 20px;">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="transcriptSearchInput" class="search-input" placeholder="உரைப்பதிவில் தேடுக (Search inside full transcript)..." oninput="filterTranscriptText()">
+                </div>
+
+                <div class="transcript-content-viewer" id="transcriptViewer">
+                    உரைப்பதிவு ஏற்றப்படுகிறது... (Loading transcript text...)
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="notification" id="notification">
+        <i class="fa-solid fa-circle-check"></i> JSON Data Saved Successfully!
+    </div>
+
+    <!-- Application Script -->
+    <script>
+        // Embedded Offline Fallbacks
+        const embeddedDefaultJSON = {
+  "title": "பகவத் கீதை கர்மா யோகா - கேள்வி பதில்கள் மற்றும் உரைப்பதிவுகள்",
+  "subtitle": "Bhagavad Gita Karma Yoga - Interactive Questions, Answers, Discussion Tracker & Weekly Transcripts Repository",
+  "metadata": {
+    "series": "Bhagavad Gita Karma Yoga Weekly Lectures",
+    "language": "Tamil (தமிழ்)",
+    "total_questions": 15,
+    "total_topics": 7
+  },
+  "transcripts": [
+    {
+      "id": "jul27_2026",
+      "title": "Karma Yoga Meeting Recording (Jul 27, 2026)",
+      "date": "July 27, 2026",
+      "duration": "51 minutes 43 seconds",
+      "language": "Tamil (தமிழ்)",
+      "file": "transcripts/Karma Yoga Meeting Recording (Jul 27, 2026).txt"
+    }
+  ],
+  "topics": [
+    {
+      "id": "definition",
+      "icon": "fa-book-bookmark",
+      "title_ta": "1. கர்மாவின் வரைவிலக்கணம் & எல்லை",
+      "title_en": "Definition & Scope of Karma"
+    },
+    {
+      "id": "control",
+      "icon": "fa-sliders",
+      "title_ta": "2. செயல் உரிமையும் கட்டுப்பாடும்",
+      "title_en": "Control, Micro & Macro Dynamics"
+    },
+    {
+      "id": "justice",
+      "icon": "fa-scale-balanced",
+      "title_ta": "3. நீதி, நியாயம் & பூர்வ ஜென்மம்",
+      "title_en": "Divine Justice & Reincarnation"
+    },
+    {
+      "id": "construct",
+      "icon": "fa-brain",
+      "title_ta": "4. கர்மக் கோட்பாட்டின் தத்துவார்த்த வடிவம்",
+      "title_en": "Psychological & Societal Construct"
+    },
+    {
+      "id": "detachment",
+      "icon": "fa-spa",
+      "title_ta": "5. துன்பம், மன விலகல் & சாதனை",
+      "title_en": "Enduring Suffering & Detachment"
+    },
+    {
+      "id": "atonement",
+      "icon": "fa-hand-holding-heart",
+      "title_ta": "6. தானம், பரிகாரம் & கட்டாயச் செயல்கள்",
+      "title_en": "Atonement, Rituals & Coerced Actions"
+    },
+    {
+      "id": "collective",
+      "icon": "fa-people-group",
+      "title_ta": "7. கூட்டுக் கர்மா & தலைமுறை வழி கர்மப்பலன்",
+      "title_en": "Collective & Generational Karma"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "topic_id": "definition",
+      "question_ta": "கர்மா என்றால் என்ன? எந்தெந்தச் செயல்கள் கர்மாவில் அடங்கும்?",
+      "question_en": "What is Karma? Which actions qualify as Karma?",
+      "timestamp": "01:00 - 03:00",
+      "category": "வரைவிலக்கணம்",
+      "context_ta": "கூட்டத்தின் தொடக்கத்தில் எழுப்பப்பட்ட முதல் கேள்வி. மனிதன் செய்யும் அன்றாட செயல்கள், சிந்தனைகள் மற்றும் இயற்கையில் நடக்கும் இயக்கங்களில் எது கர்மா எனப்படுகிறது என்ற அடிப்படை வரைவிலக்கணத்தை ஆராய்கிறது.",
+      "transcript_snippet": "\"கர்மா என்றால் விஷயங்கள் கர்மா செய்யும் என்று கேட்டிருந்தோம்... கர்மா என்றால் விஷயங்கள் கர்மா செய்யும். இது இரண்டு கொஸ்டின்கள்...\"",
+      "is_discussed": true,
+      "answer_ta": "மனம், வாக்கு, காயம் (எண்ணம், சொல், செயல்) ஆகியவற்றால் செய்யப்படும் அனைத்துச் செயல்களும் கர்மாவில் அடங்கும். மேலும் உயிரினங்கள் மற்றும் இயற்கையின் இயக்கங்களும் கர்மாவின் விரிந்த எல்லைக்குள் வருகின்றன.",
+      "answer_en": "Karma encompasses all actions done through mind, speech, and body (thought, word, deed). Additionally, biological and natural forces operate under cosmic karma.",
+      "keywords": "கர்மா என்றால் என்ன செயல்கள் karma definition actions"
+    },
+    {
+      "id": "Q2",
+      "topic_id": "control",
+      "question_ta": "நாம் செய்யும் கர்மாவில் எது நம் நேரடி கட்டுப்பாட்டில் (Control) இருக்கிறது?",
+      "question_en": "Which Karma is within our direct personal control compared to Macro and Micro processes?",
+      "timestamp": "03:00 - 05:00",
+      "category": "கட்டுப்பாடு",
+      "context_ta": "மனிதன் தான் நடப்பது, பேசுவது, சாப்பிடுவது, தொழில் செய்வது போன்ற நடுப்பகுதி (Middle Level) செயல்கள் மட்டுமே தன் கட்டுப்பாட்டில் இருப்பதாக நினைக்கிறான். ஆனால் நுண்ணிய (Micro) மற்றும் பிரபஞ்ச (Macro) அளவிலான செயல்கள் மனிதனின் கட்டுப்பாட்டைத் தாண்டியவை.",
+      "transcript_snippet": "\"எந்தக் கர்மாவை நம்முடைய கண்ட்ரோலில் இருப்பதாக நினைக்கிறோம்? நாம் நடத்துறோம்... படிக்கிறோம், பேசுகிறோம், பார்க்கிறோம், எழுதுகிறோம்... நமக்கு இந்த மிடில் லெவெல்ல இருக்கிற கர்மா மட்டும்தான் நாம் வந்து நடத்துறோம் அல்லது நம்முடைய கண்ட்ரோலில் இருக்கு...\"",
+      "is_discussed": true,
+      "answer_ta": "நமது விழிப்புணர்வில் நடக்கும் அன்றாட முடிவுகளும் நடுத்தர நிலைச் செயல்களுமே (Middle Level Actions) நம் கட்டுப்பாட்டில் உள்ளன. உடலின் உள் உறுப்புகளின் இயக்கமோ, பிரபஞ்ச நிகழ்வுகளோ நம் கட்டுப்பாட்டில் இல்லை.",
+      "answer_en": "Only conscious daily choices and middle-level actions (speaking, eating, working) are under personal control. Subconscious biological and cosmic processes are beyond individual agency.",
+      "keywords": "கட்டுப்பாடு control personal karma macro micro"
+    },
+    {
+      "id": "Q3",
+      "topic_id": "control",
+      "question_ta": "நமக்குத் தெரியாமல் மைக்ரோ & மேக்ரோ அளவில் நடக்கும் நிகழ்வுகளை (உடலின் உள் இயக்கம், இயற்கை சுனாமி/சூரிய ஜுவாலை) இயக்குவது எது/யார்?",
+      "question_en": "What/Who controls micro-level biological activities and macro-level cosmic events beyond human awareness?",
+      "timestamp": "05:00 - 08:00",
+      "category": "இயற்கை இயக்கம்",
+      "context_ta": "உணவு சாப்பிட்ட பிறகு உள்ளே நடக்கும் இரசாயன மாற்றங்கள், இரத்தம் ஓடுவது, அல்லது கடலுக்கு அடியில் நிலக்கரி வைரம் ஆவது, சுனாமி வருவது, சூரியனில் வெடிப்பு ஏற்படுவது போன்றவை மனிதனின் விருப்பப்படி நடப்பதில்லை. இவற்றை இயக்குவது யார் என்ற வினா.",
+      "transcript_snippet": "\"அதை யார் செய்கிறான்? நமக்கு உள்ளே மைக்ரோலெவெல்ல நடக்கிறது... சாப்பிட்டேன் என்பது தெரியும், எச்சில் முழுங்கினேன் என்பது தெரியும். உள்ளே போய் அந்த சாப்பாட்டில் என்ன தொழில் நடக்கிறது? எனக்கு தெரியாது... சூரியனில் அந்த ஜோலைகள் வெடிக்கும், அதுவும் நம் கண்ட்ரோலில் இல்லை.\"",
+      "is_discussed": true,
+      "answer_ta": "இயற்கையின் பேரமைப்பும் (Cosmic Intelligence / ஈஸ்வர நியதி) உடலின் தன்னிச்சை அமைப்புகளுமே (Autonomic Intelligence) இவற்றை இயக்குகின்றன. மனிதனின் அஹங்காரம் இதில் செயல்படுவதில்லை.",
+      "answer_en": "Universal Natural Intelligence (Ishvara Niyati) and autonomous biological systems govern these. The individual ego (Ahamkara) has no role in running these systems.",
+      "keywords": "மைக்ரோ மேக்ரோ உடல் செரிமானம் சுனாமி சூரியன் micro macro internal body tsunami sun"
+    },
+    {
+      "id": "Q4",
+      "topic_id": "justice",
+      "question_ta": "நாம் அறியாமல், குழந்தைப் பருவத்திலோ அல்லது பூர்வ ஜென்மத்திலோ செய்த தவறுக்கு இப்போது துன்பம்/கர்மப்பலன் தண்டனையாகக் கிடைப்பது நியாயமா?",
+      "question_en": "Is it fair to suffer now as Karma Phala for actions committed unknowingly in childhood or past lives?",
+      "timestamp": "21:00 - 23:00",
+      "category": "நீதி & நியாயம்",
+      "context_ta": "சின்ன வயதில் விளையாடும்போது விழுந்த காயம் 40 வயதில் பெரிய எலும்பு முறிவாக மாறும்போது அல்லது முந்தைய பிறவியில் செய்த தவறுக்கு இப்போது தண்டனை அனுபவிக்கும்போது, \"எனக்கே தெரியாத தவறுக்கு தண்டனை தருவது நியாயமா?\" என்ற கேள்வி எழுகிறது.",
+      "transcript_snippet": "\"எப்போது சின்ன வயதில் நான் செய்ததுக்கு இப்போது தண்டனை கிடைப்பது நியாயமா? அறியாமல் நான் இண்டென்ஷன் வைக்காமல் செய்ததற்கு... அதுக்கு இந்த தண்டனை கொடுப்பது நியாயமா?\"",
+      "is_discussed": true,
+      "answer_ta": "விதையானது எப்போது விதைக்கப்பட்டாலும் உரிய காலத்தில் முளைப்பது போல, கர்ம வினையின் பலன் கால தாமதமாக வந்தாலும் அது இயற்கையின் காரண-காரிய விதியே (Law of Cause and Effect).",
+      "answer_en": "Just as a seed planted in the past sprouts when conditions are right, Karma Phala follows the inescapable law of cause and effect, regardless of memory lapse.",
+      "keywords": "அறியாமல் குழந்தை பருவம் பூர்வ ஜென்மம் தண்டனை நியாயமா past life childhood innocent punishment"
+    },
+    {
+      "id": "Q5",
+      "topic_id": "justice",
+      "question_ta": "கடவுளின் நீதி / கர்மக் கோட்பாடு (Theory of Karma) நியாயமானதா அல்லது அநியாயமானதா?",
+      "question_en": "Is Divine Justice / the Theory of Karma inherently fair or unfair?",
+      "timestamp": "22:30 - 24:00",
+      "category": "கர்ம தியரி",
+      "context_ta": "செய்த செயல் நினைவிலேயே இல்லாதபோது அல்லது வேறு பிறவியில் செய்ததற்கு தண்டனை என்றால், கடவுளின் இந்த அமைப்பு அநியாயமானது என்று தோன்றுமா என்ற தத்துவ விவாதம்.",
+      "transcript_snippet": "\"நான் அறியாமல் செய்ததுக்கு எனக்கு இது கிடைச்சது என்றால், கடவுள்டுவது அநியாயம் என்று வரும்... கர்ம தியரி அநியாயம்...\"",
+      "is_discussed": true,
+      "answer_ta": "கர்மக் கோட்பாடு தனிப்பட்ட விருப்பத்தின் அடிப்படையில் அமையாமல் நடுநிலையான இயற்கை விதியாக இருப்பதால் அது முற்றிலும் நியாயமானதே.",
+      "answer_en": "The Theory of Karma is perfectly impartial as an impersonal natural law, akin to gravity, making divine justice entirely fair.",
+      "keywords": "கடவுள் நீதி கர்ம கோட்பாடு அநியாயம் divine justice karma theory fair"
+    },
+    {
+      "id": "Q6",
+      "topic_id": "justice",
+      "question_ta": "சிறிய வயதிலேயே அபார கலை திறமை கொண்ட குழந்தைகள் (உதா: 11 வயது வயலின் கலைஞர் கங்கா சசிதரன்) மற்றும் பிறவியிலேயே நோயோடு பிறக்கும் குழந்தைகளுக்குக் காரணம் பூர்வ ஜென்மக் கர்மாவா?",
+      "question_en": "Are child prodigies (e.g. 11-yr violinist Ganga Sasidharan) or children born with congenital illnesses proof of past-life Karma?",
+      "timestamp": "30:00 - 32:00",
+      "category": "பூர்வ ஜென்மம்",
+      "context_ta": "11 வயதில் அசாத்தியமாக வயலின் வாசிக்கும் சிறுமி கங்கா சசிதரன் போன்ற உதாரணங்கள் மற்றும் பிறவியிலேயே நோயுடன் பிறக்கும் குழந்தைகள் - இதற்குக் காரணம் வாசனைகள் மற்றும் பூர்வ ஜென்மத் தொடர்ச்சிதானா என்பதை ஆராய்கிறது.",
+      "transcript_snippet": "\"கங்கா சசிதரன் வயலின் வாசிப்பதைப் பாருங்கள்... 11 வயது... இந்த திறமை யார் சொல்லிக்கொடுத்து வந்தது? நிச்சயமாக ஒரு ஜென்மம், மறுபடியும் பிறப்பு என்பதுதான் நம் நாட்டில் சொல்லி இருக்கிறார்கள்.\"",
+      "is_discussed": true,
+      "answer_ta": "ஆம். முந்தைய பிறவிகளில் ஈட்டிய வாசனைகளும் (Purva Samskaras) முயற்சியும் பிறவியிலேயே திறமையாக வெளிப்படுகின்றன. அதேபோல கர்மக் கணக்குகளே பிறவிக் குறைபாடுகளுக்கும் காரணமாகிறது.",
+      "answer_en": "Yes. Innate talents (prodigies) and congenital conditions are reflections of Purva Janma Samskaras (accumulated impressions and deeds from previous incarnations).",
+      "keywords": "குழந்தை திறமை வயலின் கங்கா சசிதரன் நோய் மாற்றுத்திறனாளி prodigy violinist Ganga Sasidharan illness birth"
+    },
+    {
+      "id": "Q7",
+      "topic_id": "construct",
+      "question_ta": "கர்மக் கோட்பாடு (Theory of Karma) என்பது உண்மையான ஒரு இயற்கை விதியா? அல்லது மனிதன் தன் கஷ்டங்களைச் சமாளிக்கவும் ஏற்றுக்கொள்ளவும் அமைக்கப்பட்ட ஒரு கருத்தாக்கமா (Concept)?",
+      "question_en": "Is the Theory of Karma an intrinsic law of nature, or a psychological framework created by humans to cope with suffering?",
+      "timestamp": "27:00 - 29:30",
+      "category": "தத்துவக் கோட்பாடு",
+      "context_ta": "வாழ்க்கையில் துன்பங்கள் வரும்போது மனிதன் மனதளவில் உடைந்து போகாமல், அதை \"என் கர்மா\" என்று சமாதானம் செய்து ஏற்றுக்கொண்டு வாழ்வதற்காக மனித சமூகத்தால் உருவாக்கப்பட்ட ஒரு சமுதாயக் கோட்பாடா என்ற கேள்வி.",
+      "transcript_snippet": "\"கர்மா என்றது அமைக்கப்பட்ட ஒரு கோட்பாடா? மனிதனுக்கு வாழ்க்கையில் கஷ்டமே இல்லாமல் இருந்தா எதைப் பற்றியும் கவலைப்படாமல் வாழ்ந்துட்டு போவான்... கஷ்டம் வரும்போதுதான் கடவுளைத் தேடிப் போறான்...\"",
+      "is_discussed": true,
+      "answer_ta": "கர்மக் கோட்பாடு இயற்கையின் விதியாகவும் செயல்படுகிறது; அதே நேரத்தில் மனிதன் துன்பத்தில் நிலைதடமாறாமல் ஏற்றுக்கொண்டு வாழ்வதற்கான உளவியல் வடிகாலாகவும் பயன்பாட்டில் உள்ளது.",
+      "answer_en": "It serves both as an objective law of cause-and-effect and as a deeply therapeutic psychological framework to help humans process unexplainable grief.",
+      "keywords": "இயற்கை விதி மனிதன் உருவாக்கிய கோட்பாடு concept construct law of nature morality"
+    },
+    {
+      "id": "Q8",
+      "topic_id": "construct",
+      "question_ta": "கடவுள் (God) என்னும் கருத்தாக்கம் மனிதர்கள் தவறு செய்யப் பயந்து, ஒழுக்கமாக வாழ உருவாக்கப்பட்ட ஒரு சமுதாயக் கோட்பாடா (Moral / Legal Concept)?",
+      "question_en": "Is the concept of God merely a legal/moral construct created to enforce discipline and lawfulness in society?",
+      "timestamp": "29:00 - 30:00",
+      "category": "கடவுள் கருத்தாக்கம்",
+      "context_ta": "சட்டத்தில் இருந்து தப்பித்தாலும் கடவுளின் தண்டனையில் இருந்து தப்பிக்க முடியாது என்ற பயத்தை உருவாக்கி, மனிதன் ஒழுக்கமாக வாழ அமைக்கப்பட்ட ஒரு கருத்தாக்கமா கடவுள்?",
+      "transcript_snippet": "\"கடவுள் என்பது ஒரு கான்செப்ட்... நமக்கு ஒரு லீகலா, நல்லது செய்யவேண்டும் என்ற எண்ணத்தோட பயந்து வாழ்வதற்கு ஒரு கான்செப்ட்...\"",
+      "is_discussed": true,
+      "answer_ta": "சமுதாய ஒழுக்கத்தைப் பேண கடவுள் பயம் பயன்பட்டாலும், உண்மை தத்துவத்தில் இறைமை என்பது அனைத்தையும் தாங்கியுள்ள அதிஷ்டானப் பொருளாகும்.",
+      "answer_en": "While the fear of God acts as a socio-legal moral anchor, metaphysically God represents the supreme consciousness sustaining existence.",
+      "keywords": "கடவுள் பயம் லீகல் மோரல் concept legal moral construct of God"
+    },
+    {
+      "id": "Q9",
+      "topic_id": "construct",
+      "question_ta": "மறுபிறவி (Punarjanma) மற்றும் பாவம்-புண்ணியம் என்பவை சமுதாயத்தைச் சீர்படுத்த யோகிகளாலும் சாஸ்திரங்களாலும் அமைக்கப்பட்ட ஒரு அமைப்பா?",
+      "question_en": "Is the cycle of rebirth along with Sin and Merit a structured framework established by Yogis/Siddhas for social regulation?",
+      "timestamp": "32:00 - 33:00",
+      "category": "மறுபிறவி & பாவம்",
+      "context_ta": "சித்தர்கள் மற்றும் யோகிகள் தங்களின் வாழ்வியல் அனுபவங்கள் மூலம் சமுதாயத்தில் பாவம் செய்தால் தண்டனை கிடைக்கும் என்று மக்களை ஒழுங்குபடுத்திய அமைப்பா மறுபிறவி?",
+      "transcript_snippet": "\"இது ஒரு சமுதாயத்தைக் கொண்டிருப்பதற்கு பாவம், புண்ணியம்... பாவம் செய்தால் உனக்கு இந்த தண்டனை கிடைக்கும் என்று சமுதாயத்திற்காகச் சொல்லப்பட்டதா...\"",
+      "is_discussed": true,
+      "answer_ta": "சித்தர்கள் அனுபவ ரீதியாகக் கண்டறிந்த மெய்ஞான உண்மைகளை சமுதாய நன்மைக் காக பாவம்-புண்ணியம் என ஒழுக்க நெறிகளாக சாஸ்திரங்களில் அமைத்துக் கொடுத்தனர்.",
+      "answer_en": "Enlightened Siddhas codified experiential spiritual truths into moral systems of Paapam and Punyam to guide societal order.",
+      "keywords": "மறுபிறவி பாவம் புண்ணியம் சித்தர்கள் சாஸ்திரங்கள் rebirth sin merit siddhas yogis"
+    },
+    {
+      "id": "Q10",
+      "topic_id": "detachment",
+      "question_ta": "வாழ்க்கையில் துன்பங்கள் வரும்போது அதை 'தண்டனை' என்று அனுபவிக்காமல், (பால கங்காதர திலகர் சிறையில் கீதா ரஹசியம் எழுதியது போல) மனதளவில் விலகி நிற்க என்ன பயிற்சி செய்ய வேண்டும்?",
+      "question_en": "When suffering strikes, how can one remain mentally detached without perceiving it as punishment (as Tilak did in prison)? What practice is required?",
+      "timestamp": "24:00 - 26:00",
+      "category": "மன விலகல்",
+      "context_ta": "பால கங்காதர திலகர் மண்டாலே சிறையில் கடுமையான தண்டனையில் இருந்தபோதும் கலங்காமல் 'கீதா ரஹசியம்' எழுதினார். தண்டனையை தண்டனையாக அனுபவிக்காமல் மனதளவில் சாட்சியாக விலகி நிற்க என்ன மனப்பயிற்சி (Sadhana) தேவை?",
+      "transcript_snippet": "\"மற்ற கைதிகள் புலம்பிக்கொண்டு அழுகிறான்... இவரும் அமைதியாக கீதா ரஹசியத்தை எழுதிக்கொண்டு இருக்கிறார்... துன்பத்தை தண்டனையாக அனுபவிக்காமல் விலகியிருக்க என்ன பயிற்சி செய்ய வேண்டும்?\"",
+      "is_discussed": true,
+      "answer_ta": "சாட்சி பாவனை (Witness Consciousness) மற்றும் அனாசக்தி (Detachment) பயிற்சியின் மூலம் உடலும் மனமும் அனுபவிக்கும் கஷ்டங்களை நான் 'சாட்சியாக மட்டுமே பார்க்கிறேன்' என்ற பகவத் கீதையின் யோகப் பயிற்சி தேவை.",
+      "answer_en": "Cultivating Sakshi Bhava (Observer Consciousness) and Karma Yoga detachment allows one to transcend physical suffering as a non-attached witness.",
+      "keywords": "துன்பம் தண்டனை பால கங்காதர திலகர் கீதா ரஹசியம் சிறை சாதனை suffering detachment Tilak prison Gita Rahasya sadhana"
+    },
+    {
+      "id": "Q11",
+      "topic_id": "atonement",
+      "question_ta": "தானம் செய்வது, தீர்த்த யாத்திரை செல்வது போன்றவற்றால் நாம் செய்த கர்மாவின் பலனை மாற்ற முடியுமா? அல்லது துன்பத்தைத் தாங்கும் மன உறுதியைப் பெற முடியுமா?",
+      "question_en": "Can acts of charity or pilgrimages alter karmic consequences, or do they merely grant emotional strength to endure them?",
+      "timestamp": "33:30 - 35:00",
+      "category": "தானம் & பரிகாரம்",
+      "context_ta": "தானம் தருவது அல்லது புண்ணிய நதிகளுக்கு யாத்திரை செல்வது செய்த கர்மாவை அழித்துவிடுமா? அல்லது கர்மாவால் வரும் கஷ்டங்களைத் தாங்கக்கூடிய மனத் திண்மையையும் எமோஷனல் பலத்தையும் தருமா?",
+      "transcript_snippet": "\"கர்மா தீரியில் நம்பிக்கையிருந்தால் செய்ததற்கு பலன் கிடைக்கத்தான் செய்யும்... ஆனால் அதைத் தாங்கக்கூடிய எமோஷனல் பலன் தானம் செய்வதனாலையோ தீர்த்த யாத்திரை போவதனாலையோ கிடைக்கலாம்...\"",
+      "is_discussed": true,
+      "answer_ta": "பரிகாரங்களும் தானங்களும் கர்மாவைக் கரைப்பதை விட, அத்துன்பத்தை மன உறுதியோடு எதிர்கொள்ளும் ஆன்மீக மற்றும் எமோஷனல் பலத்தை (Mental Resilience) தருகின்றன.",
+      "answer_en": "Charity and pilgrimages build mental resilience and emotional strength (Emosional Power) to endure karmic retributions gracefully.",
+      "keywords": "தானம் தீர்த்த யாத்திரை பரிகாரம் மன உறுதி charity pilgrimages atonement mental strength"
+    },
+    {
+      "id": "Q12",
+      "topic_id": "atonement",
+      "question_ta": "ஒருவர் தலையில் துப்பாக்கி வைத்து மிரட்டி கட்டாயப்படுத்தி ஒரு தவறான செயலைச் செய்ய வைத்தால் (Coerced Action), அதற்கு கர்மப்பலன்/பாவம் யாருக்குச் சேரும்?",
+      "question_en": "If an individual is forced to perform an evil act at gunpoint or under threat of life, who incurs the karma/sin?",
+      "timestamp": "34:30 - 36:00",
+      "category": "கட்டாயக் கர்மா",
+      "context_ta": "மிரட்டலுக்குப் பயந்து விருப்பமில்லாமல் ஒரு தவறைச் செய்யும்போது, கர்ம விதியின்படி பலன் மிரட்டியவனுக்குச் செல்லுமா அல்லது செய்தவனுக்குச் செல்லுமா? தர்மமும் சட்டமும் இதை எவ்வாறு நோக்குகின்றன?",
+      "transcript_snippet": "\"தலையில் துப்பாக்கி வைத்து நம்மைத் தப்பு செய்யச் சொன்னால்... அதுக்கு என்ன ஆகும்? மனுநீதி சோழன் மாதிரி தன் பையனையே ரதத்தில் ஏற்றி கொல்வது போல தர்மம் ஒன்று... ஆனால் சட்டம் வேறு...\"",
+      "is_discussed": true,
+      "answer_ta": "சங்கல்பம் (Intentionality) யாருடையதோ அவனுக்கே முதன்மைப் பாவம் சேரும். கட்டாயப்படுத்தப்பட்டவனுக்குப் பலவீனத்தின் காரணமாக சிறிதளவு பலன் சேர்ந்தாலும், முதன்மைக் குற்றவாளி மிரட்டியவனே.",
+      "answer_en": "Karmic accountability primary lies with the instigator (Sankalpa/Intent owner). Law and Dharma evaluate intention over physical coercion.",
+      "keywords": "துப்பாக்கி மிரட்டல் கட்டாய செயல் பாவம் யாருக்கு சேரும் gunpoint coercion threat forced action sin"
+    },
+    {
+      "id": "Q13",
+      "topic_id": "collective",
+      "question_ta": "கூட்டுக் கர்மா (Collective Karma): ஒரு நாட்டில் போரோ, பேரழிவோ அல்லது சமுதாய நெருக்கடியோ வரும்போது, அங்குள்ள மக்கள் அனைவரும் ஒரே மாதிரியான கர்மாவையா செய்திருப்பார்கள்?",
+      "question_en": "Collective Karma: When a war, natural disaster, or geopolitical crisis engulfs a country, did all affected individuals share the same collective karma?",
+      "timestamp": "42:00 - 45:00",
+      "category": "கூட்டுக் கர்மா",
+      "context_ta": "ஒரு நாட்டில் யுத்தம் அல்லது நிலநடுக்கம் வரும்போது ஒரே நேரத்தில் ஆயிரக்கணக்கான மக்கள் பாதிக்கப்படுகிறார்கள். இவர்கள் அனைவரும் ஒரே மாதிரியான கர்ம வினையைக் கொண்டவர்களா?",
+      "transcript_snippet": "\"இப்போது ஒரு வார் வருகிறது என்று வைத்துக்கொள்ளுங்கள்... அங்கு இருக்கும் அனைவரும் ஒரே மாதிரி கர்மா செய்திருப்பார்கள் என்று சொல்ல முடியுமா... அந்த கலெக்டிவ் கர்மா...\"",
+      "is_discussed": true,
+      "answer_ta": "ஆம். தனிநபர் கர்மாவைத் தாண்டி சமுதாயப் பொதுக் கர்மா (Collective/Desha Karma) ஒன்று உண்டு. பொதுவான சமூக அதிர்வெண்ணும் சூழலும் கூட்டாகப் பாதிப்பை ஏற்படுத்துகிறது.",
+      "answer_en": "Yes. Beyond individual karma exists Collective/National Karma (Samashti Karma) where shared societal actions bring group consequences.",
+      "keywords": "கூட்டு கர்மா போர் பேரழிவு நாடு collective karma war conflict natural disaster country"
+    },
+    {
+      "id": "Q14",
+      "topic_id": "collective",
+      "question_ta": "முன்னோர்கள் / முந்தைய தலைமுறையினர் செய்த வரலாற்றுத் தவறுகளுக்கு (Colonial Exploitation / Historical Atrocities), இன்றைய தலைமுறை மக்கள் கர்மப்பலனை அனுபவிப்பது நியாயமா?",
+      "question_en": "Is it fair for current generations to suffer Karmic backlash for historic atrocities committed by past generations/ancestors?",
+      "timestamp": "43:00 - 44:30",
+      "category": "தலைமுறை கர்மா",
+      "context_ta": "முற்காலத்தில் ஐரோப்பிய நாடுகள் மற்ற நாடுகளைக் கொள்ளையடித்து சுரண்டியதன் விளைவாக, இன்று அந்நாடுகளில் ஏற்படும் சமுதாய மற்றும் பொருளாதாரக் குழப்பங்கள் கர்மப்பலனா? தற்போதைய சந்ததிக்கு இது நியாயமா?",
+      "transcript_snippet": "\"உலகத்தையெல்லாம் சுரண்டியிருக்கிறான்... இன்று அந்த கர்மா இந்த ஜெனரேஷனை அஃபெக்ட் பண்ணிக்கொண்டு இருக்கிறது. அந்த ஜெனரேஷன் செய்யவில்லை தவறு... ஆனால் பாதிக்கிறது...\"",
+      "is_discussed": true,
+      "answer_ta": "வரலாற்று ரீதியாக ஒரு சமுதாயம் அனுபவித்த தவறான வளங்கள் மற்றும் அமைப்புகளின் கர்மச் சுமையை அடுத்தடுத்த தலைமுறைகள் சமுதாய அளவில் சுமக்க நேரிடுகிறது.",
+      "answer_en": "Generational Karma operates as institutional backlash; current societies inherit the Karmic equilibrium of historic national exploits.",
+      "keywords": "முன்னோர்கள் வரலாறு காலனி ஆதிக்கம் தலைமுறை generational karma ancestors colonial history Europe UK"
+    },
+    {
+      "id": "Q15",
+      "topic_id": "collective",
+      "question_ta": "அப்பாவி நபர்கள் தற்செயலாக ஒரு போராட்டத்தில் அல்லது கூட்டத்தில் இருக்கும்போது (Collateral Damage - உதா: நாக்பூர் போராட்டத்தில் ரப்பர் குண்டு பட்டு கண் இழந்த சம்பவம்), எதிர்பாராமல் துன்புறுவது எந்த மாதிரியான கர்மா?",
+      "question_en": "When an innocent bystander is accidentally injured or paralyzed in a crowd/protest incident, what karmic factor explains such tragic collateral damage?",
+      "timestamp": "45:30 - 47:30",
+      "category": "தற்செயல் கர்மா",
+      "context_ta": "நாக்பூர் போராட்டத்தில் கூட்டத்தில் நின்றிருந்த ஒரு இளைஞன் மீது ரப்பர் குண்டு பட்டு ஒரு கண் பார்வை பறிபோன சம்பவம் - எந்தத் தவறும் செய்யாத அப்பாவிக்கு எதிர்பாராமல் நடக்கும் இந்தக் கொடூரத்திற்கு எந்த கர்மா காரணம்?",
+      "transcript_snippet": "\"நேற்று நம்ம பையன் ஒருத்தன் நாக்பூரில்... அந்த கட்டடத்தை இடிக்கும்போது கூட்டத்தில் நின்றான்... போலீஸ் சுட்டதுல ஒரு கண்ணு குருடா இருக்கு... இப்போது இதை என்ன செய்தான் கூட்டத்தில் இருந்தான்...\"",
+      "is_discussed": true,
+      "answer_ta": "தனிநபர் அறியாத கர்ம பலனும், அவர் அந்த நேரத்தில் அந்தச் சூழலில் (Wrong place at the wrong time) இருந்த கூட்டுக் கர்மாவின் குறுக்கிடலுமே இதற்குக் காரணம்.",
+      "answer_en": "It is an intersection of latent personal Karma and environment risk (Collateral Collective Karma) colliding at an unexpected instant.",
+      "keywords": "அப்பாவி கூட்டம் துப்பாக்கி சூடு நாக்பூர் collateral damage innocent bystander protest bullet"
+    }
+  ]
+};
+        const embeddedDefaultTranscript = "# கர்மா யோகா (Karma Yoga) - Tamil Audio Transcript\n\n- **Audio File**: `KarmaYoga_Jul27_2026.m4a`\n- **Date**: July 27, 2026\n- **Duration**: 51 minutes 43 seconds\n- **Language**: Tamil (தமிழ்)\n\n---\n\n### [00:00 - 03:00]\nவேலை யாராவது இருக்காங்கள் அதில்\nகுருகித்துக் கொண்டிருக்கிறேன்\nஇந்தக்கு நம்முடைய குறிஞ்சுகள் அனைத்தையும் பேசும் வேலைகள் இருக்கிறார்கள், வெனேஸ் பேசும் வேலைகள் இருக்கிறார்கள்\nநான் விட்டுவிட்டேன் அம்மா\nநான் விட்டுவிட்டேன் அம்மா\nநான் விட்டுவிட்டேன் அம்மா\nநான் விட்டுவிட்டேன் அம்மா\nநான் விட்டுவிட்டேன் அம்மா\nஆனா இன்று நாம் அந்த விட்டுவிட்டு ஆரம்பிக்கலாம் என்று\nநாங்கள் இரண்டு விஷயங்கள் கேட்டிருந்தோம்\nஇந்த விட்டுவிட்டு ஆரம்பிக்கலாம் என்று தெரியும்\nகர்மா என்றால் விஷயங்கள் கர்மா செய்யும் என்று கேட்டிருந்தோம்\nகர்மா என்றால் விஷயங்கள் கர்மா செய்யும்\nஇது இரண்டு குஷ்ணங்கள் மட்டும் அதே கொஞ்சம் நாம் பேசவேண்டும்னால் அதிலிருந்து நிறைய குஷ்ணங்கள் வேண்டும் என்றால் ஞானாவும் சொன்னார் நாம் பேசவேண்டும்னால் அதிலிருந்து நிறைய குஷ்ணங்கள் வேண்டும்\nஅப்புறம் நாம் அந்த குஷ்ணங்கள் செய்து போய்க்கொண்டிருக்கலாம்\nகுஷ்ணங்கள் வேண்டும்னால் அதிலிருந்து பேசவேண்டும்னால் அதிலிருந்து போய்க்கொண்டிருக்கலாம்\nமிக்ரோ வெளியில் நடக்கும் செயல்கள் மிக்ரோ வெளியில் நடக்கும் செயல்கள் மிக்ரோ வெளியில் நடக்கும் செயல்கள்\nமிக்ரோ வெளியில் நடக்கும் செயல்கள் மிக்ரோ வெளியில் நடக்கும் செயல்கள் மிக்ரோ வெளியில் நடக்கும் செயல்கள்\n\n### [03:00 - 06:00]\nபெரிய அளவில நடக்கும் கர்மங்கள், நடுவில நம்முடைய கண்காதுக்கு நாக்கமுக்கொழியா, எதை நம்ம தெரிய முடிவோம், உணர முடிவோம் அந்த மாதிரி கர்மங்கள்.\nஅது மாதிரி ஒரு மூனா பிரிக்கலாம். இதில் நம்முக்குள் நடக்கும் இந்த உடம்புக்குள் நடக்கும் வெளியில் மைக்ரோ வெளியில் நடக்கும் விஷயங்கள் எத்தனைமுக்கும் மில்லியன்ஸ் வெளியில் நடக்குமா இருக்கும்.\nஅதே போல மைக்ரோ வெளியிலும் ஒரு உணர்ஸ் முழுக்கு நம்முடைய பூமிக்கும் மேலியே நடக்கும் விஷயங்கள். இது நம்ம இப்படி ஒரு விவிஷன் செய்யலாம்.\nஅடுத்தது எந்தக் கர்மாவை நம்முடைய கண்டுரலில் இருப்பதா என்று நினைக்கிறோம்.\nநம்முடைய நடத்துரம், நம்முடைய முழுவாக நடக்கும் என்பது பொதுவாக மில்லியல் இருப்பது மட்டும்தான் நம்முடைய கண்டுரலில் இருக்கும் கர்மா என்று நினைக்கிறோம்.\nபடிக்கிறோம், பேசுகிறோம், பார்க்கிறோம், எழுதுகிறோம், நடக்கிறோம், யாரையோ சந்தித்து நம்முக்குள்ள ஒரு வக்கில் தொழிலை, ஒரு மருத்துவர் தொழிலை, அதைத் தொழிலுக்காகப் பயன்படுகிறோம்.\nசாப்பிடுகிறோம், நமக்கு இந்த மிடுல் லெவெல்ல இருக்கிற கர்மா மட்டும்தான் நாம் வந்து நடத்துறோம், அல்லது நம்முடைய கண்டுரலில் இருக்கு, நீ போனேன், போய் திக்கிட் வாங்கினேன் அப்படியென்பது எல்லாம்.\nசாப்பிடுகிறோம், நம்முடைய கண்டுரலில் லெவெல் நடந்துகொண்டு இருக்கிறோம், சாப்பிடுகிறோம், நம்முடைய கண்டுரலில் லெவெல் நடந்துகொண்டு இருக்கிறோம்,\nநம்முடைய கண்டுரலில் லெவெல் நடந்துகொண்டு இருக்கிறோம், சாப்பிடுகிறோம், நம்முடைய கண்டுரலில் லெவெல் நடந்துகொண்டு இருக்கிறோம், சாப்பிடுகிறோம், நம்முடைய கண்டுரலில் லெவெல் நடந்துகொண்டு இருக்கிறோம்,\nநம்முடைய கண்டுரலில் லெவெல் நடந்துகொண்டு இருக்கிறோம், சாப்பிடுகிறோம், நம்முடைய கண்டுரலில் லெவெல் நடந்துகொண்டு இருக்கிறோம், சாப்பிடுகிறோம்\nநம்முடைய கண்டுரலில் லெவெல் நடந்துகொண்டு இருக்கிறோம், சாப்பிடுகிறோம், நம்முடைய கண்டுரலில் லெவெல் நடந்துகொண்டு இருக்கிறோம், சாப்பிடுகிறோம், நம்முடைய கண்டுரலில் லெவெல் நடந்துகொண்டு இருக்கிறோம், சாப்பிடுகிறோம்\nநம்முடைய கண்டுரலில் லெவெல் நடந்துகொண்டு இருக்கிறோம், சாப்பிடுகிறோம்\n\n### [06:00 - 09:00]\nநெலைக்கரி வைரமா மாறுது, ஒரு எலை கிழுளுவது, ஒரு மரத்துடைக்கில கிழுளுவது, மண்ணுக்கணையில் புதிந்து போதுவது.\nஆயிரம் ஆயிரம் வருஷம் கிழித்து நெலைக்கரியா மாறுது, அதுக்கும் ஐயாயிரம் வருஷம் கிழித்து வைரமா மாறுது.\nஇந்த செய்து கர்மா தான், ஆனால் இது நமக்கு மிகவும் சட்டல் வெள்ளை, அந்த கீழை எலை விழர்கள் மட்டும் தான் நமக்கு கண்ணுக்கு தெரியும்.\nகிடைச்சியில் வைரமா கிடைக்குறது தெரியும், மட்டும் எதுவும் நமக்கு தெரியாதே நமக்கு கட்டுவலையில்லை.\nஅதை யார் செய்கிறான்? நமக்கு உள்ளே மைக்ரோலவெல்ல நடக்கிறது, இப்போது சாப்பாட்டை நான் சாப்பிட்டேன் என்பது தெரியும், இப்போது நான் எச்சல் முழுகினேன் என்பது தெரியும், அவ்வளவுதான்.\nஉள்ளே போய் அந்த சாப்பாட்டில் என்ன தொழில் நடக்கிறது? எனக்கு உள்ளேதான் நடக்கிறது.\nஆனால் எனக்கு தெரிய வேண்டாம் என்றால் சயின்ஸ்ல புக்களைப் படித்து தெரிந்துகொள்ளாம் என்று தவிரே, என்னால் அதைப் பிரச்சிவு செய்ய முடியாது, என்னுடைய நான்…\nசட்டமே வரலி அவ்வளவு நேரம்…\nசிறிது நிமிடம்…\nநான் முதலில் திருணம் செய்கிறேன், நான் இப்போது ரத்தத்தை அந்த மனைவியைத் திடிக்க வைத்து, ரத்தத்தை அந்த குழாலை செலுத்துகிறேன், இதோ இப்போது ரத்தத்தில் இருக்கும் கால்சியம் சுட்டோன்ல, நம்முடைய எலும்புல் சென்று செல்லும்…\nநம்முடைய குறிப்பதில் இல்லை, நான் செய்வதான் அவன் எனக்கும் இல்லை, ரத்தத்தில்தான் நான் இதை செய்கிறேன் என்று நமக்கு வரமாட்டேன், நம்முடைய குறிப்பதில் இல்லை, என்ன நடக்கிறது என்று தெரியாது.\nகுறிப்பதில் நம்முடைய குறிப்பதில் சுணாமியில் நடக்கிறது. இங்கும் ஒரு இந்தனையால் குறிப்பதில் நடக்கிறது, இங்கே சென்னையின் ஆகபாட்டனத்தில் சுணாமி வந்தது.\nஇந்தது அது உள்ள மக்ரோ தெரிய அளவில்லை, நம்முடைய சாய்சை விட தெரிய சாய்சை. இங்கும் ஒரு இடத்தில் சூரியனில் வந்து அந்த உணர்வுகள் இரண்டாலக்ஷம் கிலோமிட்டர் பத்திலக்ஷம் கிலோமிட்டர் நீழத்துக்கு குறிப்பதில் ஆகபாடுகிறது.\nஅது நம்ம செட்டிலைட்டு எல்லாம் எதிர்ந்து பயிறும் அப்படி இப்படி என்ன சொல்கிறான் என்று\nசூரியனும் நம்ம கொண்டுல எல்லாம் அந்த சூரியனுடைய ஜோதிகள் அந்த ஜோலைகள்\nவெளியராக இருக்கும் நம்ம கொண்டுல எல்லாம் அது எவ்வளவு தூரா வீடிச்சாகும்\nபூமியோருக்கும் வருமா நம்ம உருவாக்கிய நகர்களையோ நம்ம உருவாக்கிய செட்டிலைட்டுகளையோ அழித்துவிடுமா எந்தும் நம்ம கொண்டுல வருகின்றோம்\nசோ மக்ரோ சாய்ட்\n\n### [09:00 - 12:00]\nநான் செய்யவில்லை, மிக்ரோ சைத்தில் நான் செய்யவில்லை, இந்த நடுவில் இருக்கும் மட்டும் நான் செய்கிறேன் என்று நினைக்கிறேன், தெரியாது நான்தான் செய்கிறேன் என்றால்,\nஅந்த மாதிரி கர்மா, இந்த லெய்ஜஸ் இதை மையமாக வைத்து, அதற்குப் பிறகு நாம் இந்தக் கேள்விகள் செய்யவேண்டும், நாம் செய்யும் கர்மா மட்டும் தனியாக எடுத்துப்போம், மிக்ரோ, மிக்ரோ போகும்போது அனுமதியத்தில் செய்யவேண்டும்,\nதரமாத்மா, ஏதோ ஒரு குறிப்பு, ஏதோ ஒரு குறிப்பு, ஏதோ ஒரு குறிப்பு, அது என்ன அதுக்கு மதியாக, நிலையாக, நிலையாக,\nஅது வீசிமில்லா, உருவம் இல்லாதா, உருவம் இல்லாதா, எனர்ஜியா, எனர்ஜியைத் தாண்டியத்தாவதா,\nஅது இன்னொரு குறிப்பு, மிக்ரோ, மெக்ரோ, இந்தவட்டு நம்முடைய எளவள், நான் எஞ்ஜினியர், நான் யூக்டியூபர், புரிவிசர் அப்படிக்கொள்வது மாதிரி, நமக்கு தெரியும் விஷயம்,\nஇன்னொரு குறிப்பு, மிக்ரோ, மெக்ரோ, இந்தவட்டு நம்முடைய எளவள், நான் எஞ்ஜினியர், நான் யூக்கியூபர், புரிவிசர அப்படிக்கொள்வது மாதிரி,\nஇந்த விஷயத்தைக் கண்டுகிறாய் விஷயங்கள், இந்த விஷயத்தைக் கண்டுகிறாய் விஷயங்கள், இந்த விஷயத்தைக் கண்டுகிறாய் விஷயங்கள்,\nஇந்த விஷயத்தைக் கண்டுகிறாய் விஷயங்கள், இந்த விஷயத்தைக் கண்டுகிறாய் விஷயங்கள், இந்த விஷயத்தைக் கண்டுகிறாய் விஷயங்கள், இந்த விஷயத்தைக் கண்டுகிறாய் விஷயங்கள், இந்த விஷயத்தைக் கண்டுகிறாய் விஷயங்கள்,\nகாலையில் திரீட்டில் வந்திருக்கிறேன், இந்த விஷயத்தைக் கண்டுகிறாய் விஷயத்தைக் கண்டுகிறாய் விஷயத்தை.\nவிஷயத்தைக் கண்டுகிறாய் விஷயத்தைக் கண்டுகிறாய் விஷயத்தைக் கண்டுகிறாய் விஷயத்தைக் கண்டுகிறாய் விஷயத்தை.\nவிஷயத்தைக் கண்டுகிறாய் விஷயத்தைக் கண்டுகிறாய் விஷயத்தைக் கண்டுகிறாய் விஷயத்தைக் கண்டுகிறாய் விஷயத்தை.\n\n### [12:00 - 15:00]\nநீங்கள் ஏன் ஏற்று உக்காந்துவிட்டீர்கள்? நான் திக்கேட் கலெட்டர் ராத்திரி பயின் ஒரு முழுக்கு வந்தால் 5 மணிக்கு கிளம்புகிறேன். நான் நெல்லூரில் அறைக்கிறேன், கூடூரில் அறைக்கிறேன், விட்ரகும்தால் அறைக்கிறேன் என்று எதிர்பார்த்தேன் என்று வாருகிறேன்.\nஏனென்றால் திக்கேட்கள் செல்லாது. நான் எதிர்பார்த்தேன் என்று தெரியாது. பிறகு நீங்கள் ஏன் ஏற்று உக்காந்தீர்கள்? நான் திக்கேட் கலெட்டர் ராத்திரி பயின் ஒரு முழுக்கு வந்தால் 5 மணிக்கு கிளம்புகிறேன்.\nபிறகு நான் கேட்டேன் எனக்கு நான் பணங்கு வைக்கிறேன் என்று பேர கோச்சு, ஏசி கோச்சுலுகூட ஏதாவது நீ பயின் போட்டு எனக்கு திக்கேட் போடவேண்டும் என்று.\nசரி என்று சொல்லிவிட்டான், ஏசித் திரீட்டை எல்லாம் ஒரு நம்பம் சொல்லிவிட்டான். நான் பார்த்தேன் என்னிடம் கேஷா இல்லை.\n10 ருப்பாக 20 ருப்பாக் கேட்டேன் என்று கூறினேன். இந்தன்னெட்டு வேலை செய்யில், வேலை செய்யில், வாங்கிலிருந்து எடுத்துப் போடவேண்டும் என்றால் நான் கூறினேன்.\nநீ எனக்கு ஒரு 800 ருப்பா என்னுடைய நம்பரில் போடு, நான் வந்தேன் திக்கெட்கு கொடுக்கவேண்டும் என்று.\nஎன்னுடைய நம்பரில் போட்டால் இண்டென்றெட்டு இல்லையே, நான் எப்படி எடுக்க முடியும்?\nஅது பயிற்றும் இல்லை, அந்த இடத்திற்கு இப்போது உட்கார்ந்தேன், தீசி வந்தார்,\nநான் உங்கள் நம்பரைக் கொடுங்கேன், நான் நம்பரைப் பணம் போடச் சொல்கிறேன்,\nஅப்படியெல்லாம் நடக்காது, காஷ்த\nஅப்படியெல்லாம் நடக்காதே, காஷ்தான் கொடுக்கவேண்டும் இந்த சிஸ்டம்ல, என்னுடைய நம்பரில் போட முடியாதீர்கள்.\nநான் அப்படியே சும்மா பேசினேன், மராக்கிகாரன், மராஷ்டாள் என்று தெரிந்தது, நான் மராக்கியில் பேசினேன்,\nஇது மாதிரி ஒரு புத்த விஷயம், அவனின் நம்பரில் பணம் போடச் சொல்கிறேன், நீ என்னுடைய நம்பர் தீசியின் தொடர்புகொள்ளுங்கள் என்று கூறினேன்,\nதீசி நான் இறங்கிவிடுவேன், நீ வரவில்லை என்றால், நீ இறங்கிக் கீழை போடும்போது உன்னுடைய பணத்தை நில்வேக்கு நீ கொடுத்துவிடு,\nநீ உன்னுடைய கையிலிருந்து கேஷ் கொடுத்திருக்கிறாய் இல்லையா?\nஅவன் ஏற்றுக்கொள்ளவில்லை.\nநான் பணத்தைப் போடச் சொன்னேன், அவனுடைய நம்பருக்குப் பணம் வந்துவிட்டது.\nநான் 100 ருவா, நினைக்கிறேன்.\n100 ருவா, 500 ருவா கொடுக்கும், 400 ருவா கொடுக்கும்.\nசேர்த்தின் கேஷ் இருந்தால் அவனுடைய குடுத்திருக்கிறான், நான் அந்த தீசிட்டைக் கொடுத்துவிடுகிறேன் என்று.\nஅவன் போட்ட பணத்தை அவனுடைய கேஷ் வைத்திருக்கிறான், கொடுத்துவிட்டான்.\nஅந்த மாதிரி ஒரு, இப்பொழுது நுக்கு கட்டுரல் இருக்கிறது என்று நினைக்கிறது.\nகட்டுரல் இருக்கிறது. கிட்டு வாகவேண்டும், கட்டுரல் போகவேண்டும், விதாஸ் அக்ஷன் கரமான். ஆனால் எங்கே தடப்பட்டு போவோம்? யார் இதைக் கண்டுகிறார்?\n\n### [15:00 - 18:00]\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\nநம்முடைய குடும்புகள் எப்படியும் கொண்டு வருகிறது என்று கூறுகிறோம்\n\n### [18:00 - 21:00]\nஇந்தஸ்ஸ்ஞ் அப்படியென்றால் மிகவும் முக்கியமாகப் பார்க்காங்க. போர்ட்டில்லாம் இந்தஸ்ஸ்ஞ் கூடியிருக்கிறது. நாம் ஏதோ தர்காப்புக் காட்டி விஷயத்தை செய்துவிட்டோமா, அந்தக் குலசைந்த அக்ஷன்தான்.\nஆனால் நீங்கள் தர்காப்புக் காட்டி விஷயத்தை செய்தால், அந்த மனத்தில் நீங்கள் என்னை யோசித்து செய்தாய் என்பதற்கு ஒரு விஷயமான தீர்ப்பு இருக்கிறது.\nநீங்கள் தர்காப்புக் காட்டி விஷயத்தை செய்தால், அந்த மனத்தில் நீங்கள் தர்காப்புக் காட்டி விஷயத்தை செய்தாய் என்பதற்கு ஒரு விஷயமான தீர்ப்பு இருக்கிறது.\nநீங்கள் தர்காப்புக் காட்டி விஷயத்தை செய்தால், அந்த மனத்தில் நீங்கள் தர்காப்புக் காட்டி விஷயத்தை செய்தாய் என்பதற்கு ஒரு விஷயமான தீர்ப்பு இருக்கிறது.\nநீங்கள் தர்காப்புக் காட்டி விஷயத்தை செய்தாய் என்பதற்கு ஒரு விஷயமான தீர்ப்பு இருக்கிறது.\nநீங்கள் தர்காப்புக் காட்டி விஷயத்தை செய்தாய் என்பதற்கு ஒரு விஷயமான தீர்ப்பு இருக்கிறது.\nநீங்கள் தர்காப்புக் காட்டி விஷயத்தை செய்தாய் என்பதற்கு ஒரு விஷயமான தீர்ப்பு இருக்கிறது.\nநீங்கள் தர்காப்புக் காட்டி விஷயத்தை செய்தாய் என்பதற்கு ஒரு விஷயமான தீர்ப்பு இருக்கிறது.\nநீங்கள் தர்காப்புக் காட்டி விஷயத்தை செய்தாய் என்பதற்கு ஒரு விஷயமான தீர்ப்பு இருக்கிறது.\nநீங்கள் தர்காப்புக் காட்டி விஷயத்தை செய்தாய் என்பதற்கு ஒரு விஷயமான தீர்ப்பு இருக்கிறது.\nநீங்கள் தர்காப்புக் காட்டி விஷயத்தை செய்தாய் என்பதற்கு ஒரு விஷயமான தீர்ப்பு இருக்கிறது.\nநீங்கள் தர்காப்புக் காட்டி விஷயத்தை செய்தாய் என்பதற்கு ஒரு விஷயமான தீர்ப்பு இருக்கிறது.\nநீங்கள் தர்காப்புக் காட்டி விஷயத்தை செய்தாய் என்பதற்கு ஒரு விஷயமான தீர்ப்பு இருக்கிறது.\nநீங்கள் தர்காப்புக் காட்டி விஷயத்தை செய்தாய் என்பதற்கு ஒரு விஷயமான தீர்ப்பு இருக்கிறது.\nநீங்கள் தர்காப்புக் காட்டி விஷயத்தை செய்தாய் என்பதற்கு ஒரு விஷயமான தீர்ப்பு இருக்கிறது.\nதீர்ப்பு காட்டி விஷயத்தை செய்தாய் என்பதற்கு ஒரு விஷயமான தீர்ப்பு இருக்கிறது.\n\n### [21:00 - 24:00]\nபோட்டு செய்யவில்லை. இப்போது இதுக்கு யாரும் பொறுப்பு? அவனுக்கு என்ன தண்டனை கிடைக்கவேண்டும்? தண்டனை கிடைத்தால் இது ஒரு விஷயம். இது இந்த ஜன்மத்திலேயே, போனே ஜன்மும் இது நியாயமா?\nஎப்போது சின்ன வயதில் நான் செய்ததுக்கு இப்ப தண்டனை கிடைப்பது நியாயமா? இவர் நீங்கள் சொல்வது, இப்போது எனக்கு கிடைக்கும் தண்டனையைப்பற்றி நீங்கள் வெங்கக்கையில் எல்லோரும் சொல்கிறீர்கள், கர்மப்பலம் என்று.\nநான் சொல்கிறேன் அந்த அக்ஷன் எனக்கு தெரியாமல் நான் இண்டெஞ்சன்னு வைத்துக்காமல் எனக்கு இன்னொரிம்ஸ்ல சின்ன குழந்தைத்தைப் பர்வத்தில் அல்லது போன ஜென்மத்தில் நாம செய்தது\nஅது கருமாவா, அதுக்கு இந்த தண்டனை அது கொடுப்பது நியாயமா, அப்படியென்பது கிட்டதட்ட நான் ஞானபற்காஸ் கேட்ட கேள்வி\nஇது என் கடவுள் இந்த திட்டி இது நியாயமா என்றால் நான் அறியாமல் செய்ததுக்கு எனக்கு இது கிடையாது என்று ஒத்திருந்தால்தான் கடவுள் செய்வது அணியாயம் என்று வரும் கருமத்தியரி அணியாயம்\nஇப்போ அது நியாயம்தான் இருக்க முடியும் என்றால் நான் தெரியாமல் செய்ததோ, நான் செய்தேன் என்பதை எனக்கு மறந்து போனதோ, அது இந்த மாதிரி பாசுமான கர்மப்பலனை கொடுத்தா, அப்போ அந்த கர்மத்துக்கும் இதையும் இணைக்கும் தவறில்லை என்ப முடிவுதான் வந்தாலும் வேற வழியில்லை நமகிடம்\nமூன்று மாதமாக வெட்டியாகச் சொல்லிட்டு இருக்கிறான், எல்லா விஷயம் கேட்டேன், எப்போதும் ஆறு வயத்தில் ஏழு வயத்தில் சின்ன வயத்தில் ஏதோ விளையடுப்போதோ, ஸ்கிப்பிங் செய்யுப்போதோ, கீழே விழுந்து காலில் கணுக்கால் ஓர் ஹர்லையின் பிராக்சரா இருக்கும்\nசின்னாட்டு வலிச்சுது சரியா போச்சு, பிறகு சின்ன வயது பூடி ஆடியாது மறந்து போச்சு.\nஇன்று கேட் 40 வயதுல, 10-30 வருஷம் வெளிச்சுயன், அது பெரிச்சா வளர்ந்து வெங்கி வெங்கி போய்,\nஇப்போது அது எப்படி நியாயம் அது இந்த தண்டனை, நான் எப்படி இதை எடுத்துக்கொள்ள முடியும்,\nவயத்தில் ஏதாவது நடந்தது, நான் மறந்து கூட போய்விட்டேன், அதுக்கு இப்படி கிடைக்கலாமா?\nஅப்படி நாம் கேட்டால் பிறகு அது தெரியவில்லை, அதுக்கு என்ன?\nவாழ்க்கை செய்ய வேண்டும். இப்போது நீங்கள் கேட்ட கேள்விகளில் இன்னொரு விஷயம் இருக்கிறது.\nஅவர் இதை எப்படி எடுத்துக்கொள்ள வே\nஅவர் இதை எப்படி எடுத்துக்கொள்ள வேண்டும் என்கிறது. நான் ஒரு விஷயத்தைக் கஷ்டம், எனக்கு இது பெரிய கஷ்டம், இது எனக்கு பெரிய சாவம்.\n\n### [24:00 - 27:00]\nஅப்படியே எழுத்துண்டா, அந்தக் கஷ்டம் பெரிச்சா இருக்கும். நான் அதை பெரிச்சா கழுத்தில் எழுத்துக்கொள்ளவிருக்கிறான்.\nஅப்போது அது எனக்கு தண்டனை இல்லை. வெளியே இருந்து பார்க்கும் ஆளுக்கு வேண்டும் என்றால் அது கஷ்டமா இருக்கலாம்.\nநோயாடி வந்து, அம்மா வந்துவிட்டது, அது சரி, கட்டம் பா, அது ஏதாவது வந்திருக்கிறது.\nகாமாட்டுக்கு என்னுடைய முக்கு எழுதுவது வேலையை, இதைப் பண்ணுவேன் அப்படி நிறுக்கிறான்,\nபக்கத்தில் இருக்கும் அவன் என்ன சொல்லலான், நீங்கள் எப்படி தடுமாறுகிறீர்கள்,\nஎப்படி வலியில் துடிக\nஎப்படி வழியில் துடிக்கிறீர்கள், மிகவும் கஷ்டம் அப்படின்னு, அவனுக்குக் கஷ்டம் இல்லையே, அவன்தான் தண்டனையா, அனுபவித்தால்தானே தண்டனை, அவன் அனுபவிக்குமே இல்லையே,\nமற்ற கைதிகள் புலம்பிக்கொண்டு இருக்கிறான், அழுகிறான், இவரும் அனுத்தமாக கீதை எழுதிக்கொண்டு இருக்கிறார், கீதாராஹச்சியமாக அந்த கர்மகியோகப்பத்தி,\nஅப்போது அந்த பேஷன்ட், அந்த சப்பரர் கர்மத்துடைய தண்ணையை அனுபவிக்கும்வர்,\nஅவரும் எதுவும் தண்ணவன்தில் விலக்கிக்க வேண்டும், அது ஒன்றுதான் செல்லும், இது எப்படி முடியும், அதற்கு என்ன பயிற்சி செய்யவேண்டும், அப்படி இருக்கும் என்று அடுத்த கேள்வி வரும், அப்படி போலாம்,\nஅவர்கள் கேள்விலேயே மூது காலை அச்பெட்டு நாங்கள் கேள்வியிருக்கலாம், கேள்வி ரெகாடா இருக்கா, நோட்பிட்டு இருக்கார்கள், செய்யும் ஐயா, நாங்கள் படிவிட்டீர்கள், நீங்கள் கூறிய அச்பெட்டில் நியானா, நீங்கள் கேள்வியிருக்கிறீர்கள்,\nநீங்கள் கேள்வியிருக்கிறீர்கள், நீங்கள் கேள்வியிருக்கிறீர்கள், நீங்கள் கேள்வியிருக்கிறீர்கள், நீங்கள் கேள்வியிருக்கிறீர்கள், நீங்கள் கேள்வியிருக்கிறீர்கள், நீங்கள் கேள்வியிருக்கிறீர்கள், நீங்கள் கேள்வியிருக்கிறீர்கள், நீங்கள் கேள்வியிருக்கிறீர்கள்.\nநீங்கள் கேள்வியிருக்கிறீர்கள், நீங்கள் கேள்வியிருக்கிறீர்கள், நீங்கள் கேள்வியிருக்கிறீர்கள், நீங்கள் கேள்வியிருக்கிறீர்கள்.\nநீங்கள் கேள்வியிருக்கிறீர்கள், நீங்கள் கேள்வியிருக்கிறீர்கள்.\nநீங்கள் கேள்வியிருக்கிறீர்கள், நீங்கள் கேள்வியிருக்கிறீர்கள்.\nநீங்கள் கேள்வியிருக்கிறீர்கள், நீங்கள் கேள்வியிருக்கிறீர்கள்.\nநீங்கள் கேள்வியிருக்கிறீர்கள், நீங்கள் கேள்வியிருக்கிறீர்கள்.\nநீங்கள் கேள்வியிருக்கிறீர்கள், நீங்கள் கேள்வியிருக்கிறீர்கள்.\nநீங்கள் கேள்வியிருக்கிறீர்கள், நீங்கள் கேள்வியிருக்கிறீர்கள்.\nஇதனாலனா நிறைய விஷயங்கள் நம் வாழ்க்கையில் நம் கொண்டில் இல்லை. நம் விஷயங்கள் நடக்கும்போது நாம் இது வந்து இது கர்மா, இது நம்மே ஏற்றுப்போம், இதுயும் கடந்து போகோம் அப்படியென்ற எண்ணங்களை எடுத்துக்கொள்கிறோம்.\nஅப்படியென்றால் இது வந்து கர்மா என்றது\n\n### [27:00 - 30:00]\nஒரு உண்மையான விஷயமா, இல்லை ஒரு விஷயமா, இல்லை ஒரு விஷயமா, இல்லை ஒரு விஷயமா, இல்லை ஒரு விஷயமா, இல்லை ஒரு விஷயமா, இல்லை ஒரு விஷயமா, இல்லை ஒரு விஷயமா, இல்லை ஒரு விஷயம் அமைக்கப்பட்ட ஒரு கோட்பாடா,\nஎதுக்கு அது மாதிரி அதிகமா வருகிறது அப்படின்னா, மனிஷ்யனுக்கு வாழ்க்கையில் வந்து கஷ்டமே இல்லாமல் இருக்கானா எதைப்பற்றினே கவலைப்படாமா வாழ்ந்துட்டு போறும் அவன்,\nயாரைப் பற்றியும் கவலைப்படாமல் அவன் பாட்டா வாழ்க்கையில் வாழ்ந்துட்டு போறும் அவனுக்கு கஷ்டம் என்னும் வரும்போது தான் கடவுளைத் தேடிப் போறு, ஏன் எனக்குத் தான் இப்படி ஆகுது, இது மாதிரி விஷயங்கள் எல்லாம் நடக்குது,\nஅப்படி பார்க்கும்போது, கர்மா ஒருவனை சந்தோஷமா வைச்சியிருக்குன்னும்போது, அவன் எதைப் பத்தியுமே கவலைப்படாமல், இறவனை இறவன் நோக்கிப் போறுத்துதான் நம்முடைய வாழ்க்கையுடைய பிறந்ததுக்கான காரணம் அப்படின்னா, அந்த ஒரு செயலில் கூட இயிடுப்படாமா வாழ்க்கை வாழ்ந்துட\nகர்மா என்றது வந்து அவனுடைய வாழ்க்கையோடன் நோக்கரத்தை அவனுக்குப் புரியவைச்சு, அவன் எப்படி வானுன்றத்தை அவனுக்குச் சொல்வத்து கான ஒரு அமைப்பு தானா, அது உண்மை தானா.\nஇல்லை நம்ம அது மாதிரி ஒன்று கிடையாது, ஆனா வாழ்க்கையில நடக்குற விஷயங்களை எப்படி நம்ம ஏற்றுக்கொண்டு\nஇல்லை, நம்ம் அது மாதிரி ஒன்று கிடையாது, ஆனா வாழ்க்கையில் நடக்கும் விஷயங்களை எப்படி நம்மே ஏற்றுக்கொண்டு, நம்ம் இந்த வாழ்க்கை ஒன்றும் சிறப்பாக அமைத்துக்கொள்ள வேண்டும் என்றதுக்காக அமைக்கப்பட்ட ஒரு கொடுப்பாட.\nஒரு அவ்வின், அவ்வின் மாதிரி, சரி, மிகவும் சரியான கேள்விதார். ஆனால் நான் என்ன சொல்கிறேன், இது நீங்கள் சொன்னால் மாதிரி சரியான,\nஒரு மனித்தினை இன்னும் சந்தோஷமா வாழ வைப்பதற்கு அவனுக்குக் கிடைக்கக்கொள்ளுய சப்பிரிகிசாவுந்து, அவனே எதுவொரு வாங்கையில் ஜெஸ்டிவாய் பண்ணி, அதிலிருந்து வெடியும் வரத்துக்கு ஒரு காணச்செட்ட ஐடியா.\nஅது கடவுளைப் பற்றி கூட அர்த்தி சொல்ல தான் கடவுள் என்பது ஒரு கான்செட்டு அப்படின்னு சொல்லவார்கள் இருக்கான்னு\nகடவுள் முன்னும் கிடையாது ஒரு கான்செட்டு\nநமக்கு ஒரு லீகலா, லாவ வெய்டிங்கா, நல்லது செய்யவேண்டும் ஒரு எண்ணத்தோட, பயந்து வாழ்வதற்கு ஒரு கான்செட்டு\nநீங்க அந்தப் பொன்னு, கங்கா சசீதரன் வைலின் வாசிக்கதைக் கேளு, பயினொரு வயது இப்போது\nஎனக்கு தெரிந்து மூன்று, நாளு வருஷமாக வைலின் வாசிக்கிறான், நான் யூட்டியூபில் கேட்டுக்கொண்டு இருக்கிறேன்\nகங்கா சசீதரன்\n\n### [30:00 - 33:00]\nகேரலா, இந்த தேலென்று யார் சொல்லிக் கொடுத்து வந்தது, ஒரு கால அவர் அப்பா வந்து மூன்று வயதுல, இரண்டு வயதுல வயனின் பொம்மையை வாங்கிக் கொடுத்துக்கொள்ளலாம், அதை வந்து அவைக்கு வைத்து விளையாடியிருக்கலாம்,\nஅப்பா விளையாடியின் வயலின் வாசிக்கியவராக இருக்கலாம், அங்கே அவர் விளையாடியின் வாசிக்கியவருக்குள்ளே, இவர் கேட்டிருக்கலாம் அல்லது பார்த்திருக்கலாம்.\nஆனால் விளையாடியின் வாசிக்கியவராக இருக்கலாம் அல்லது கேட்டிருக்கலாம் அல்லது பார்த்திருக்கலாம் அல்லது விளையாடியின் வாசிக்கியவராக இருக்கலாம்.\nஅந்த விளையாடியின் வாசிக்கியவராக இருக்கலாம் அல்லது பார்த்திருக்கலாம்.\nவிளையாடியின் வாசிக்கியவராக இருக்கலாம் அல்லது பார்த்திருக்கலாம் அல்லது பார்த்திருக்கலாம்.\nஇந்த நாம் ஒன்று நாளுக்கு இருக்கும் பட்டம். பல வருடங்கள் பார்த்திருக்கிறோம்.\nஎப்படி அவனுக்கு இருக்கிறது? இப்போது அவளுடைய கர்மப்பலன் அதற்கு என்ன கர்மக்காரணம்?\nநிச்சயமாக ஒன்று ஜன்மம், மறுபடியும் பிரப்பு என்பதுதான் நம் நாட்டில் நாம் வந்துள்ளோம். நிறைய நோயாகப் பிறக்கும் குழந்தை, இல்லது திரமச்சாலியாக இருக்கும் குழந்தை,\nதிடீரென்று சைக்கியே, மனப்பான்மே மாறி, லய்வே மாறிப்போற சிறு வயது, எதுவும் வயது, எத்தனையும் வழக்குகள். இதற்கு நிச்சயமாக மறுபடியும் பிரப்பு என்ற ஒரு விஷயத்திற்கு நம் நாட்டில் போயிருக்கிறார்கள்.\nஆனால் இந்த மறுபடியும் போயிருக்கிறது, சில சித்தர்கள், யோகிகள் நம் கண்ணாதை நிழுவித்திருக்கிறார்கள். நம் கண்ணாதை வாழ்ந்த சிலத்தில் அவருடைய வாழ்க்கையில் நிழுவித்திருக்கிறார்கள்.\nஅதைக்கூட நாம் அதையும் கேட்கிறோம், படிக்கிறோம், அவர் அடைந்திருக்கிறார் அந்த விஷயத்தில். இது ஒரு சம்மதாயத்தைக் கொண்டிருப்பதற்குப் பாபம், புண்ணியம், ஒரு சம்மதாயத்தைக் கொண்டிருப்பதற்குப் பாபம், புண்ணியம், ஒரு சம்மதாயத்தைக் கொண்டிருக்கிறார்கள்.\nஅதை வேண்டும் என்றால் சொல்லலாம், சம்மதாயத்தைக் கொண்டிருப்பதற்குப் பாபம் செய்தால், உனக்கு இந்த தண்டனை கிடைக்கும்.\n\n### [33:00 - 36:00]\nஇந்த உலகத்திலியோ அடுத்த உலகத்திலியோ அடுத்த பிறவிலியோ உடனே கடிக்கலாம்\nசாப்டா உடனே பசி தீரும் பலன்\nபராக்டிஸ் பண்ணா போட்டியில் கலந்துகொள்ளலாம்\nதொங்கப்ப கடுமையாக பராக்டிஸ் பண்ணா போட்டியில் ஜெய்கிக்கலாம்\nடீட்டுக்குப் பிரபேர்பட்டுவிட்டால் டீட்டு தொடர்புகிறால் மருத்துவராக இருக்கலாம்\nஇது வந்து கொஞ்சம் கர்மாவின் சிறிய விஷயத்தைப் பலன் தெரியும் நமக்கு\nநிறைய வழக்குகள் தெரியும் மறுபடியும் என்பது மட்டும் நமக்குப் புரியமாட்டேன்\nஅதே மாதிரி சொன்னால் இன்னொரு விஷயம் தவ்வான செயலில் போறவன் அதில் ஒரு கேள்வி தோன்றிக்கொண்டு இருக்கிறது\nநீங்கள் கேட்டிருக்கும் கேள்விகளில் கேர்ச்செல்ல முடியுமா?\nஅதில்தான் கிளோதிஸ்ஸம் இது எல்லாம் இருக்கிறது\nகர்மா தீரியில் நம்பிக்கின்றால் முடியாது நம்முடைய செய்தத்திற்கு கிடைக்கத்தான் கிடைக்கலாம்\nஆனால் நமக்கு அதைத் தாங்கக்கூடிய எமோசியல் கிடைக்கலாம் தானம் செய்வது நாளியோ தீர்த்தியாத்தில் போவது நாளியோ\nபிறகு நிறைய நன்றாக இருக்கிறது கேள்விகள் எல்லாமே தீரியில் தலையில் துப்பாக்கி வைத்து நம்மைத் தப்பாரம் செய்யச் சொன்னான்\nஅதுக்கு என்ன ஆகும் அதும் அதேதான்\nஇழிச்சி அதற்கும் பலன்னமாகக் கிடைக்கும்\nமனுநீதி சோழன் மாதிரி தன் பையனை\nரதத்தைக் கொள்ள வைச்சு நசுக்குற அடிடுடு இருந்தால்\nநான் செத்தாலும் பரவாயில்லை நான் நீ சொல்வதை செய்யமாட்டேன்\nசுட்டு தள்ளு வேண்டாம் அவளின் சொல்வதை ஏறியம் இருந்தால் அது வேண்டாம்\nநமக்கும் சில வீக்னஸ்ஸ் இருக்கு, அப்போது நாம் செய்யும், நான் செய்யலாய் என்னவென்று சுப்பாக்கி காட்டி மிரட்டி செய்யவைச்சான், சொல்லிக்கலாம்\nஆனால் சட்டம் வந்து நம்மை பணிக்காது. அது வந்து கொடுக்கவேண்டிய தண்டனையும் கொடுக்கும்\nசின்னப்பையன் 14 வயது கீழே கர்ப்பழித்து ரேப் செய்துவிட்டான், அவனுக்கு தட்டனை மாறலாம் என்று தெரிவுகிறேன். அவனுக்கு எச்சரிப்ஷன் இல்லை.\nமாதிரி சத்தம் ஒன்று, தர்மமும் ஒன்று, பல சமயும் இரண்டு ஒன்றாகத்தான் இருக்கிறது.\nசில சமயும் தர்மமும் ஒன்று ஒரு விஷயம் சொல்வது, சத்தம் வேறு விஷயம் சொல்வது, எதுவும் ஆறாக இருக்கிறது.\nசரி, அதெல்லாம் நாம் நிறைய ஆராய்ச்சிகளில் செய்ய முடியும். சமுதாயத்தை பெரிய அளவில் உழுகித்து வைத்திருக்கிறது என்பது உண்மை.\nசிறிது வயது என்னுடைய வீட்டில் வந்து பொய் சொன்னால் மோயலரம் கிடைக்காதே என்று தெரியும் என்றால் சொல்லுவேன். நான் ஒரு எட்டு பத்துகள் இருக்கிறேன்.\n\n### [36:00 - 39:00]\nஅது வயதுக்குப் பிறகு எனக்கு எங்கே யாரும் அந்த விஷயத்தைச் சொன்னவில்லை.\nஅது அந்த வயதில் என் மனத்தில் பொய் சொல்லக்கூடாது பதி வைக்கத்துக்காகச் சொன்ன விஷயம்.\nஅவ்வளவுதான், எறுப்பு தின்னா கண்டு தெரியும் அப்படின்னு சொல்வார்.\nஅதை எங்கள் வீட்டில் எங்கள் அப்பா கோலம் போடும்போது மாம் கோலம் போட்டுவிட்டு எறுப்பு அதை தின்னத்தால் நமக்கு அது வெறும் மூக்க வைத்துதான் வாழ்கிறது.\nமுகர் சக்தி அதுக்கு கண் தெரியாது. அப்படியென்று நமக்கு நம்பிக்க.\nஅந்த இரும்புக்கு நாம் சாப்பார் போட்டால் நமக்கு கண் தெரியும் கர்மம். நிறைய சிறிய வயதில் சில விஷயத்தைப் பதிவைக்கச் சொல்லிருக்கிறார்கள். அது சின்டிப்பிக்க அப்படியென்று தெரியாது.\nஆனால் சின்ன வயதில் சமுதாயத்தில் மக்கள் மனத்தில் சந்தேவையில் அப்படியிருக்கிறது.\nநீங்கள் ஒரு விஷயம் சொல்லுங்கள். நன்றாக இருக்கும்.\nஇன்னும் இப்போது சொல்ல வேண்டுமா என்று தெரியவில்லை. நாலாது கேள்வியும் மிகவும் சுத்தம்.\nஅதாவது இந்த கர்மா என்பது எப்போது பதிலாக இருக்கும் என்று சொல்லலாம்.\nகர்மாவின் தெரியவில் தெரியவில் தெரியவில் தெரியவில் தெரிய\nதெரியவில் தெரியவில் தெரியவில் பதிலாக இருக்கும் தெரியவில் பதிலாக இருக்கும் தெரியவில் பதிலாக இருக்கும்.\nதெரியவில் தெரியவில் பதிலாக இருக்கும் தெரியவில் பதிலாக இருக்கும்.\nதெரியவில் தெரியவில் பதிலாக இருக்கும் தெரியவில் பதிலாக இருக்கும்.\nதெரியவில் தெரியவில் பதிலாக இருக்கும் தெரியவில் பதிலாக இருக்கும்.\nதெரியவில் தெரியவில் பதிலாக இருக்கும் தெரியவில் பதிலாக இருக்கும்.\nதெரியவில் தெரியவில் பதிலாக இருக்கும் தெரியவில் பதிலாக இருக்கும்.\nதெரியவில் தெரியவில் பதிலாக இருக்கும் தெரியவில் பதிலாக இருக்கும்.\nதெரியவில் தெரியவில் பதிலாக இருக்கும் தெரியவில் பதிலாக இருக்கும் தெரியவில் பதிலாக இருக்கும்.\n\n### [39:00 - 42:00]\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி பதில் கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\nபதில் கீதை கர்மா யோகா உபன்யாசம் கேள்வி\n\n### [42:00 - 45:00]\nயோரோக்கில் கடும்பியான பிரச்சினைகள் வருகின்றன. இன்று இட்டாலியில் என்ன செய்திருக்கிறார்கள்?\nஇட்டாலியைச் சுற்றி நிறைய அயிலென்று இருக்கிறது. அந்த அயிலில் இருக்கும் நம்மை விட, அதிகாமான பேர் இரண்டு வோட்டில் வந்து\nபிரச்சினைகள் முசலின்கள் அந்த அயிலிட்டுக்குள்ளை டாஷ் பண்ணி உள்ளே போன்ற அயிலிட்டை கேட்சர் பண்ணிட்டார்\nஜார்ஜ மெல்லவுணியாக்கு பெரிய பிரச்சினை வரும் இந்த பிரச்சினைக்கு மாலமா, அவள் பெரிய பேச்சு எல்லாம் பேசுகிறார்\nஆனால் அதை வரும்பதற்கான சக்தியோ பார்லைமென்றிப் பாவர்வில் இருக்காம் என்பது தெரியவில்லை, அடுத்த தேரத்தில் ஜெயிப்பாளாது தெரியவில்லை, நீங்கள் வெள்ளிக்குப் புட்பாலைப் பாருங்கள், எல்லா தீமும் பிராஞ்சு தீமில் ஒருவன் கூட பிரிஞ்சாளில் இல்லை, விளக்காரன் இல்லை\nஎல்லாவற்கான அராவ்த்தேசங்களே வந்துவிட்டார்கள், ஆனால் நான் இதை சொல்லும்போது, வைட் மேல் எனக்கு பரிதாவம் வரமாட்டிக்கொண்டு இருக்கிறது.\nஎனக்கு கர்மா, உலகத்தில் எல்லாம் சுறந்தி இருக்கிறான், உலகத்தில் எல்லாம் கொல்ல எடித்திருக்கிறான், சக்ஜுகேட் பண்ணிக்கிறான்,\nஇந்த போர்ச்சுகீஸ் வந்து நம் கோவால் 1000, 40,000 வேறை எழிச்சுகொன்னான் கிருஸ்துவனா மாறின்னான், சேன் ஜெய்வியம், புதுச்செய்யில், பாண்டிச்செய்யில், பிரிஞ்சு, நம்ம ஊரில் அவ்வளவா செய்யல, நீங்கள் அவ்ரிக்கன், பிரிஞ்சு, காலினிஸ்லாம் போனால் கதைகள் கேட்கலாம்.\nஇன்று அந்த கர்மா இந்த ஜெனரேஷனை அப்பேட்டுக்கொண்டு இருக்கிறது. அந்த ஜெனரேஷனை செய்யவில்லை தவறு.\nஏதோ நானும் குருப்சம் முன்னால் உந்தையர்கள் செய்தார்கள். இங்கிலாந்துடன் நிலை என்ன?\nபிணாண்சியல் நிலை என்ன? சோஷியல் பொப்புலேஷன் நிலை என்ன?\nலொந்தன் மேயிருப்புரு பாகிஸ்டானி துலுக்கன், வைட்சுந்து ரோடுக்கு வந்து ரீ ரீ ரீஜேன் அவருடைய ஈங்கிலாண்டு,\nநீங்கள் அவர் ஈங்கிலாண்டு விரைவேண்டும் என்று பிள்ளைக்காட பிடித்துண்டு ஓட்டுவான்.\nஎன்னைக் கொலையாட்சியிருக்கிறான் நம்ம நாட்களை எல்லாம்.\nஇது கர்மத்தான், அவனைப் பாதிக்க வேண்டும். இது நியாயமா, அடுத்த நிறுவனத்தில் பாதிக்கலாமா?\nஅப்படின் சொன்னால், கேள்வி இருக்கிறது, ஆனால் பாதிக்கத்தான் பாதிக்கும், அது உண்மையாக இருக்கிறது.\nஎன்ன நினைக்குக்கிறீர்கள்?\nகண்டிஸ், ஏதாவது குறிஞ்சுகள் இருக்கிறது? இப்போது ஒரு வார் வருகிறது என்று வைத்துக்கொள்ளுங்கள், அங்கு இருக்கு அனைவரும் அப்படியாக ஆதரவும் அல்லவா, அந்தக் கண்டிரில் இருக்கு அனைவரும் வார்வார்கள்,\nபாலோயில் ஒரு பாலோயில் அந்தப் பாடல்கள் அனைவரும் அப்படியாக ஆதரவும் அனைவரும் ஒரே மாதிரி கர்மா செய்திருப்பார்கள் என்று கூறும்போகிறேன், அந்தக் கலெட்டியில் அந்தப் பாடல்கள் அல்லவா,\n\n### [45:00 - 48:00]\nஉங்கள் அப்பிட்டாராங்க\nரம்பு ஒரேவர் அல்லது இன்னும் எவ்வளவு பெரிய பாதிப்பாடுகிறீர்கள் பாருங்கள்\nஅவன் நியாயமா, அனியாயமா என்று தெரியவில்லை நாங்கள்\nஅரம் தேஷங்களில் யாருக்கு முன்னால இருக்கும் பிரிஸினினிட்டு\nஏற்படுத்தி வைச்ச அமரிக்காவுடைய ஏற்பேஸ் அங்கிருந்து இரானுக்கு பாம் போடுறான்\nஇரான் திருப்பி எடிக்கது அரம் தேஷத்து, அமரிக்கா மேல் அவனால அவ்வளவு\nரெய்னி மிசானி இல்லை அரம் தேஷத்து பாரிக்கிறேன்\nஇவன் என்ன பண்ணா, அரம் தேஷம் துபை என்ன பண்ணித்து\nபணத்துக்காக தன்னே நாட்டு ஓயல் மேலையும் தன்னே நாட்டுயும் அமரிக்காவுடைய குவித்தான் பணத்துக்காக\nஒசம்ம பெண்ணாடனே, அமரிக்கன் கொண்டரைட்டர், ஆனால அரமிக்\nஇது நம்முடைய அறிவால புரிந்துகொள்ள விஷயம் இல்லை\nயார்? ஏன் இவன் பாதிக்கப்பட்டும்? ரோடில் போடுவேன், துப்பாக்கிச் சூட்டில்\nநேற்று நம்ம பையா ஒத்தன், நாக்பூரில் யோட்டியா போராட்டதுக்கு வேண்டாம்\nஅந்தக் கட்டத்தை இடிக்கும்போது, முகாயின் சிங்க் வந்து\nநான் ரப்பர் புருண்டு, குலிஸ் துட்டுது, இப்போது அவனுக்கு 82லிருந்து எத்தனை வருடங்கள் ஆன்று, இது 35 வருடங்கள் ஆன்று\nஅவனுடைய ஒரு கண்ணு குருடா இருக்கிறது, நன்றாக மிகவும் பாவர்ப்புல் ஆளு\nஅவன் பொல்லுட்டேஷனா வந்திருந்தால் என்னிடம் இருக்கலாம்\nதேவெந்தன் பண்ணவீசுவின் தொகுதையில் சீப்பினேஸ்டாகக்கூட இருக்கலாம், முடிந்துவிட்டது எல்லாரும் பெரியும்\nஇப்போது இதை என்ன செய்தான், கூட்டத்தில் இருந்தான்\nதேவெந்தன் பண்ணவீசுவின் தொகுதாகக்கூட்டது எல்லாரும் பெரியும்\nதேவெந்தன் பண்ணவீசுவின் தொகுதாகக்கூட்டது எல்லாரும் பெரியும்\nதேவெந்தன் பண்ணவீசுவின் தொகுதாகக்கூட்டது எல்லாரும் பெரியும்\nதேவெந்தன் பண்ணவீசுவின் தொகுதாகக்கூட்டது எல்லாரும் பெரியும்\nதேவெந்தன் பண்ணவீசுவின் தொகுதாகக்கூட்டது எல்லாரும் பெரியும்\n\n### [48:00 - 51:00]\nசெய்ய முடியும் என்று ராங்கிலுக்கும் வர முடியும் என்று தெரியும். நல்ல டிஸ்கேஷ்ஷின்னு, போ போ நமக்கு புரியும் என்றால் எப்படி இதை செய்யணும் என்று அவர் சொல்லும் பாதி, அதை நாம் அண்டர்ஸ்டான் படிக்க வேண்டும் கர்மாலியோகா புரியும் என்று ஒரு ராங்கிக்கு.\nஅவர் நிறந்திரம்போது ஒரு இது செய்திருக்கிறார், 'மை பாரத்' அப்படின்னு ஒரு அமைப்பு, போர்ட்டல்.\nஅதில் ஐயைப்பற்றி நான்கு ரம்பின் நேரம் நிறுவனத்திலும், ஐயைப்பற்றி நான்கு நிறுவனத்திலும், ஐயைப்பற்றி நிறுவனத்திற்குப் பணம் வந்தாலும்.\nஅதில் நிறுவனத்திற்குப் பணம் வந்தாலும் ரம்பின் நேரம் நிறுவனத்திற்குப் பணம் வந்தாலும்.\nஉங்களுக்கு என்ன தொழுது என்று சொல்கிறேன் ஞானகனேஷ், இந்தக் குறிஞ்சுகள் நாம் செய்து போகும், நியானாவிடம் நான் குறிஞ்சுகள் சேர்ந்து போகும்.\nஇந்தக் குறிஞ்சுகளில் நாம் செய்து போகும் வேண்டும், இந்தக் குறிஞ்சுகளில் நாம் செய்து போகும் வேண்டும்.\nஇதெல்லாம் நாம் கொஞ்சம் சேர்ந்து போகும், இந்தக் குறிஞ்சுகள் நாம் சேர்ந்து போகும், இந்தக் குறிஞ்சுகளில் நாம் சேர்ந்து போகும், இந்தக் குறிஞ்சுகளில் நாம் சேர்ந்து போகும், இந்தக் குறிஞ்சுகளில் நாம் சேர்ந்து போகும்\nகுறிஞ்சுகளில் நாம் சேர்ந்து போகும், இந்தக் குறிஞ்சுகளில் நாம் சேர்ந்து போகும், இந்தக் குறிஞ்சுகளில் நாம் சேர்ந்து போகும், இந்தக் குறிஞ்சுகளில் நாம் சேர்ந்து போகும், இந்தக் குறிஞ்சுகளில் நாம் சேர்ந்து போகும்\nகுறிஞ்சுகளில் நாம் சேர்ந்து போகும், இந்தக் குறிஞ்சுகளில் நாம் சேர்ந்து போகும், இந்தக் குறிஞ்சுகளில் நாம் சேர்ந்து போகும்\nகுறிஞ்சுகளில் நாம் சேர்ந்து போகும், இந்தக் குறிஞ்சுகளில் நாம் சேர்ந்து போகும், இந்தக் குறிஞ்சுகளில் நாம் சேர்ந்து போகும்\nகுறிஞ்சுகளில் நாம் சேர்ந்து போகும், இந்தக் குறிஞ்சுகளில் நாம் சேர்ந்து போகும், இந்தக் குறிஞ்சுகளில் நாம் சேர்ந்து போகும்\nகுறிஞ்சுகளில் நாம் சேர்ந்து போகும்\nகுறிஞ்சுகளில் நாம் சேர்ந்து போகும்\nகுறிஞ்சுகளில் நாம் சேர்ந்து போகும்\nகுறிஞ்சுகளில் நாம் சேர்ந்து போகும்\n\n### [51:00 - 54:00]\nசெய்து கொள்ளலாம்\nஹரியோம்\nசரி\nஅடுத்த வாரம் சந்திக்கலாம்\nரேஷி கிருஷ்ணன்\nநன்றி";
+
+        let appData = null;
+        let currentTopic = 'all';
+        let currentSearchTerm = '';
+        let fullTranscriptText = '';
+
+        async function initApp() {
+            const savedState = localStorage.getItem('karma_yoga_questions_state');
+            if (savedState) {
+                try {
+                    const parsed = JSON.parse(savedState);
+                    if (parsed && parsed.questions && parsed.questions.length > 0) {
+                        appData = parsed;
+                    }
+                } catch (e) {
+                    console.error('LocalStorage parse error:', e);
+                }
+            }
+
+            if (!appData || !appData.questions || appData.questions.length === 0) {
+                try {
+                    const response = await fetch('questions_data.json');
+                    if (response.ok) {
+                        const fetched = await response.json();
+                        if (fetched && fetched.questions && fetched.questions.length > 0) {
+                            appData = fetched;
+                        }
+                    }
+                } catch (e) {
+                    console.warn('Fetch failed, using embedded JSON fallback:', e);
+                }
+            }
+
+            if (!appData || !appData.questions || appData.questions.length === 0) {
+                appData = embeddedDefaultJSON;
+            }
+
+            renderFilters();
+            renderQuestions();
+            updateStats();
+            renderTranscriptDropdown();
+        }
+
+        function switchView(viewName) {
+            document.querySelectorAll('.main-tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.view-section').forEach(sec => sec.classList.remove('active'));
+
+            if (viewName === 'questions') {
+                document.getElementById('tabQuestionsBtn').classList.add('active');
+                document.getElementById('viewQuestions').classList.add('active');
+            } else if (viewName === 'transcripts') {
+                document.getElementById('tabTranscriptsBtn').classList.add('active');
+                document.getElementById('viewTranscripts').classList.add('active');
+                loadSelectedTranscript();
+            }
+        }
+
+        function renderFilters() {
+            const filterContainer = document.getElementById('topicFilters');
+            let html = `<span class="topic-chip active" data-topic="all" onclick="filterByTopic('all', this)">அனைத்தும் (All Topics)</span>`;
+            if (appData && appData.topics) {
+                appData.topics.forEach(t => {
+                    html += `<span class="topic-chip" data-topic="${t.id}" onclick="filterByTopic('${t.id}', this)">${t.title_ta}</span>`;
+                });
+            }
+            filterContainer.innerHTML = html;
+        }
+
+        function filterByTopic(topicId, element) {
+            document.querySelectorAll('.topic-chip').forEach(c => c.classList.remove('active'));
+            element.classList.add('active');
+            currentTopic = topicId;
+            renderQuestions();
+        }
+
+        function renderQuestions() {
+            const container = document.getElementById('questionsContainer');
+            let html = '';
+
+            if (!appData || !appData.topics || !appData.questions) {
+                container.innerHTML = `<div style="text-align:center; padding:50px; color:var(--text-muted);"><h3>வினாக்கள் கிடைக்கவில்லை</h3></div>`;
+                return;
+            }
+
+            appData.topics.forEach(topic => {
+                if (currentTopic !== 'all' && currentTopic !== topic.id) return;
+                const topicQuestions = appData.questions.filter(q => q.topic_id === topic.id);
+                const visibleQuestions = topicQuestions.filter(q => {
+                    if (!currentSearchTerm) return true;
+                    const text = (q.question_ta + ' ' + q.question_en + ' ' + (q.answer_ta||'') + ' ' + (q.answer_en||'') + ' ' + (q.keywords||'')).toLowerCase();
+                    return text.includes(currentSearchTerm);
+                });
+
+                if (visibleQuestions.length === 0) return;
+
+                html += `
+                <section class="topic-group" data-topic="${topic.id}">
+                    <div class="topic-title">
+                        <i class="fa-solid ${topic.icon}"></i>
+                        <span>${topic.title_ta} (${topic.title_en})</span>
+                    </div>
+                    <div class="questions-list">
+                `;
+
+                visibleQuestions.forEach(q => {
+                    const isDiscussed = q.is_discussed;
+                    const statusClass = isDiscussed ? 'discussed' : 'pending';
+                    const statusText = isDiscussed ? '<i class="fa-solid fa-circle-check"></i> விவாதிக்கப்பட்டது (Discussed)' : '<i class="fa-solid fa-hourglass-half"></i> நிலுவையில் (Pending)';
+
+                    html += `
+                        <div class="question-card" id="card-${q.id}">
+                            <div class="card-header" onclick="toggleCard('${q.id}')">
+                                <div class="q-number">${q.id}</div>
+                                <div class="q-title-wrapper">
+                                    <div class="q-title-ta">${q.question_ta}</div>
+                                    <div class="q-title-en">${q.question_en}</div>
+                                    <div class="q-status-row">
+                                        <div class="meta-badges">
+                                            <span class="timestamp-badge"><i class="fa-solid fa-stopwatch"></i> ${q.timestamp}</span>
+                                            <span class="category-tag">${q.category}</span>
+                                        </div>
+                                        <button class="status-toggle-btn ${statusClass}" onclick="toggleStatus(event, '${q.id}')">
+                                            ${statusText}
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                            </div>
+                            <div class="card-body">
+                                <div class="detail-block">
+                                    <div class="detail-block-title"><i class="fa-solid fa-circle-info"></i> பின்னணி (Context)</div>
+                                    <div class="context-box">${q.context_ta}</div>
+                                </div>
+                                <div class="detail-block">
+                                    <div class="detail-block-title"><i class="fa-solid fa-quote-left"></i> உரைப்பதிவுப் பகுதி (Transcript Snippet)</div>
+                                    <div class="transcript-snippet">${q.transcript_snippet}</div>
+                                </div>
+                                <div class="answer-editor-box">
+                                    <div class="detail-block-title"><i class="fa-solid fa-pen-to-square"></i> விவாதிக்கப்பட்ட பதில் / குறிப்புகள் (Type Answer & Notes)</div>
+                                    <div class="form-group">
+                                        <label><i class="fa-solid fa-language"></i> தமிழ் பதில் (Tamil Answer):</label>
+                                        <textarea class="answer-textarea" oninput="updateAnswer('${q.id}', 'ta', this.value)" placeholder="இங்கே விவாதிக்கப்பட்ட பதிலைத் தட்டச்சு செய்க (Type Tamil answer here)...">${q.answer_ta || ''}</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label><i class="fa-solid fa-globe"></i> English Summary Answer:</label>
+                                        <textarea class="answer-textarea" oninput="updateAnswer('${q.id}', 'en', this.value)" placeholder="Type English summary answer here...">${q.answer_en || ''}</textarea>
+                                    </div>
+                                    <button class="save-card-btn" onclick="saveData()"><i class="fa-solid fa-floppy-disk"></i> Save to Backend JSON</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                html += `</div></section>`;
+            });
+
+            container.innerHTML = html || `<div style="text-align:center; padding:50px; color:var(--text-muted);"><h3>வினாக்கள் கிடைக்கவில்லை</h3></div>`;
+        }
+
+        function toggleCard(id) {
+            const card = document.getElementById(`card-${id}`);
+            if (card) card.classList.toggle('open');
+        }
+
+        function toggleStatus(event, qId) {
+            event.stopPropagation();
+            const question = appData.questions.find(q => q.id === qId);
+            if (question) {
+                question.is_discussed = !question.is_discussed;
+                renderQuestions();
+                updateStats();
+                autoSaveState();
+            }
+        }
+
+        function updateAnswer(qId, lang, value) {
+            const question = appData.questions.find(q => q.id === qId);
+            if (question) {
+                if (lang === 'ta') question.answer_ta = value;
+                if (lang === 'en') question.answer_en = value;
+                autoSaveState();
+            }
+        }
+
+        function updateStats() {
+            if (!appData || !appData.questions) return;
+            const total = appData.questions.length;
+            const discussed = appData.questions.filter(q => q.is_discussed).length;
+            document.getElementById('discussedCount').innerText = discussed;
+            document.getElementById('statsSummary').innerHTML = `<i class="fa-solid fa-circle-check" style="color: var(--accent-green);"></i> <strong style="color: var(--text-primary);">${discussed}</strong>/${total} கேள்விகள் விவாதிக்கப்பட்டன (Discussed)`;
+        }
+
+        function autoSaveState() {
+            localStorage.setItem('karma_yoga_questions_state', JSON.stringify(appData));
+        }
+
+        async function saveData() {
+            autoSaveState();
+            
+            // Try posting directly to local server backend API (/api/save)
+            try {
+                const res = await fetch('/api/save', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(appData, null, 2)
+                });
+                if (res.ok) {
+                    const result = await res.json();
+                    showNotification('✓ ' + (result.message || 'Saved directly to questions_data.json on disk!'));
+                    return;
+                }
+            } catch (e) {
+                console.warn('Backend API save endpoint unavailable, falling back to LocalStorage & Download:', e);
+            }
+
+            // Fallback if local backend server is not running
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appData, null, 2));
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.setAttribute("href", dataStr);
+            downloadAnchor.setAttribute("download", "questions_data.json");
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
+            showNotification('Saved to LocalStorage & Exported questions_data.json!');
+        }
+
+        function resetData() {
+            if (confirm('Reset all typed answers & statuses to original defaults?')) {
+                localStorage.removeItem('karma_yoga_questions_state');
+                location.reload();
+            }
+        }
+
+        /* Transcript Viewer Logic */
+        function renderTranscriptDropdown() {
+            const select = document.getElementById('transcriptSelect');
+            let html = '';
+            if (appData && appData.transcripts && appData.transcripts.length > 0) {
+                appData.transcripts.forEach(t => {
+                    html += `<option value="${t.file}">${t.title} (${t.date})</option>`;
+                });
+            } else {
+                html = `<option value="Karma Yoga Meeting Recording (Jul 27, 2026).txt">Karma Yoga Meeting Recording (Jul 27, 2026)</option>`;
+            }
+            select.innerHTML = html;
+        }
+
+        async function loadSelectedTranscript() {
+            const select = document.getElementById('transcriptSelect');
+            const file = select.value || 'Karma Yoga Meeting Recording (Jul 27, 2026).txt';
+            const viewer = document.getElementById('transcriptViewer');
+
+            viewer.innerHTML = 'உரைப்பதிவு ஏற்றப்படுகிறது... (Loading transcript text...)';
+
+            try {
+                const res = await fetch(file);
+                if (res.ok) {
+                    fullTranscriptText = await res.text();
+                    viewer.innerText = fullTranscriptText;
+                    return;
+                }
+            } catch (e) {
+                console.warn('Fetch failed, using embedded fallback transcript:', e);
+            }
+
+            fullTranscriptText = embeddedDefaultTranscript;
+            viewer.innerText = fullTranscriptText;
+        }
+
+        function filterTranscriptText() {
+            const term = document.getElementById('transcriptSearchInput').value.toLowerCase().trim();
+            const viewer = document.getElementById('transcriptViewer');
+            if (!term) {
+                viewer.innerText = fullTranscriptText;
+                return;
+            }
+            const lines = fullTranscriptText.split('\n');
+            const matchingLines = lines.filter(line => line.toLowerCase().includes(term));
+            if (matchingLines.length > 0) {
+                viewer.innerText = `--- Matches Found (${matchingLines.length} lines) ---\n\n` + matchingLines.join('\n');
+            } else {
+                viewer.innerText = 'தேடிய வார்த்தை உரைப்பதிவில் இல்லை.';
+            }
+        }
+
+        function copyTranscriptText() {
+            navigator.clipboard.writeText(fullTranscriptText).then(() => {
+                showNotification('Transcript copied to clipboard!');
+            });
+        }
+
+        function showNotification(msg) {
+            const notif = document.getElementById('notification');
+            notif.innerText = msg;
+            notif.style.display = 'block';
+            setTimeout(() => { notif.style.display = 'none'; }, 3500);
+        }
+
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            currentSearchTerm = e.target.value.toLowerCase().trim();
+            renderQuestions();
+        });
+
+        window.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>

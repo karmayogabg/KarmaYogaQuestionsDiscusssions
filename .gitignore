@@ -1,0 +1,14 @@
+# Large audio files and temporary processing chunks
+*.wav
+*.m4a
+*.mp4
+*.m4a.mp4
+chunks/
+tools/
+scratch/
+.system_generated/
+build_html.py
+generate_clean_html.py
+fix_html.py
+update_html_editor.py
+*.Zone.Identifier

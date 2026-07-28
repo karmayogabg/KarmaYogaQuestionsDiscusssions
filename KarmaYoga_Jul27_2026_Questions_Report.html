@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive Questions & Topics Report from Karma Yoga Meeting Recording (Jul 27, 2026) - Tamil & English Analysis">
+    <title>கர்மா யோகா - கேள்வி பதில்கள் அறிக்கை | Karma Yoga Questions Report</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome icons via CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: rgba(30, 41, 59, 0.7);
+            --bg-card-hover: rgba(51, 65, 85, 0.8);
+            
+            --accent-gold: #f59e0b;
+            --accent-gold-light: #fbbf24;
+            --accent-orange: #ea580c;
+            --accent-purple: #8b5cf6;
+            --accent-blue: #38bdf8;
+            --accent-green: #10b981;
+            
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            
+            --border-color: rgba(255, 255, 255, 0.1);
+            --border-highlight: rgba(245, 158, 11, 0.3);
+            
+            --glass-bg: rgba(15, 23, 42, 0.75);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --shadow-glow: 0 10px 30px -10px rgba(245, 158, 11, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', 'Noto Sans Tamil', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(245, 158, 11, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(139, 92, 246, 0.08) 0%, transparent 40%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding-bottom: 60px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styling */
+        header {
+            padding: 40px 0 30px;
+            text-align: center;
+            position: relative;
+            border-bottom: 1px solid var(--border-color);
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.5) 0%, transparent 100%);
+        }
+
+        .badge-header {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            color: var(--accent-gold);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffffff 0%, #fbbf24 50%, #ea580c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 750px;
+            margin: 0 auto 25px;
+        }
+
+        .meta-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .meta-item i {
+            color: var(--accent-gold);
+        }
+
+        /* Stats Bar */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--border-highlight);
+        }
+
+        .stat-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+        }
+
+        .icon-gold { background: rgba(245, 158, 11, 0.15); color: var(--accent-gold); }
+        .icon-purple { background: rgba(139, 92, 246, 0.15); color: var(--accent-purple); }
+        .icon-blue { background: rgba(56, 189, 248, 0.15); color: var(--accent-blue); }
+        .icon-green { background: rgba(16, 185, 129, 0.15); color: var(--accent-green); }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        /* Controls: Search & Topic Filter */
+        .controls-wrapper {
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+            margin-bottom: 35px;
+        }
+
+        .controls-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(16px);
+            border-radius: 20px;
+            padding: 18px 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .search-box {
+            position: relative;
+            width: 100%;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .search-input {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--border-color);
+            padding: 12px 16px 12px 48px;
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+        }
+
+        .filter-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .topic-chip {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 7px 15px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        .topic-chip:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+        }
+
+        .topic-chip.active {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-orange) 100%);
+            color: #000;
+            font-weight: 600;
+            border-color: transparent;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
+        }
+
+        /* Topics Sections & Question Cards */
+        .topic-group {
+            margin-bottom: 40px;
+        }
+
+        .topic-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--accent-gold-light);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(245, 158, 11, 0.2);
+        }
+
+        .topic-title i {
+            background: rgba(245, 158, 11, 0.15);
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .questions-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .question-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+        }
+
+        .question-card:hover {
+            border-color: var(--border-highlight);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .card-header {
+            padding: 20px 24px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .q-number {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-orange) 100%);
+            color: #000;
+            font-weight: 700;
+            min-width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+
+        .q-title-wrapper {
+            flex-grow: 1;
+        }
+
+        .q-title-ta {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .q-title-en {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .q-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 10px;
+            font-size: 0.8rem;
+        }
+
+        .timestamp-badge {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-blue);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            padding: 3px 10px;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .category-tag {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            padding: 3px 10px;
+            border-radius: 6px;
+        }
+
+        .toggle-icon {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+            margin-top: 4px;
+        }
+
+        .question-card.open .toggle-icon {
+            transform: rotate(180deg);
+            color: var(--accent-gold);
+        }
+
+        /* Card Content Body */
+        .card-body {
+            display: none;
+            padding: 0 24px 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(15, 23, 42, 0.4);
+        }
+
+        .question-card.open .card-body {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .detail-block {
+            margin-top: 18px;
+        }
+
+        .detail-block-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .context-box {
+            background: rgba(30, 41, 59, 0.6);
+            border-left: 3px solid var(--accent-gold);
+            padding: 14px 18px;
+            border-radius: 0 10px 10px 0;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .transcript-snippet {
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 14px 18px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            font-family: inherit;
+            white-space: pre-wrap;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        /* Footer & Print */
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 50px 20px;
+            color: var(--text-muted);
+            display: none;
+        }
+
+        .no-results i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--border-color);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            .card-header { padding: 16px; }
+            .controls-card { padding: 16px; }
+            .topic-title { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="badge-header">
+                <i class="fa-solid fa-dharmachakra"></i> பகவத் கீதை உபன்யாசம்
+            </div>
+            <h1>கர்மா யோகா - கேள்வி பதில்கள் அறிக்கை</h1>
+            <p class="subtitle">Karma Yoga Meeting Recording (Jul 27, 2026) - Detailed Tamil & English Question Analysis organized by Core Topics</p>
+            
+            <div class="meta-info">
+                <div class="meta-item">
+                    <i class="fa-solid fa-file-audio"></i> `KarmaYoga_Jul27_2026.m4a`
+                </div>
+                <div class="meta-item">
+                    <i class="fa-solid fa-clock"></i> 51 நிமிடம் 43 விநாடி (51m 43s)
+                </div>
+                <div class="meta-item">
+                    <i class="fa-solid fa-language"></i> தமிழ் (Tamil Q&A Discussion)
+                </div>
+                <div class="meta-item">
+                    <i class="fa-solid fa-layer-group"></i> 7 தலைப்புகள் (7 Core Topics)
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Executive Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon icon-gold">
+                    <i class="fa-solid fa-circle-question"></i>
+                </div>
+                <div>
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">முக்கிய கேள்விகள் (Total Questions)</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon icon-purple">
+                    <i class="fa-solid fa-folder-tree"></i>
+                </div>
+                <div>
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">பகுக்கப்பட்ட தலைப்புகள் (Topics)</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon icon-blue">
+                    <i class="fa-solid fa-headphones"></i>
+                </div>
+                <div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">ஒலிப்பதிவு பகுப்பாய்வு (Audio Analyzed)</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon icon-green">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <div>
+                    <div class="stat-number">18</div>
+                    <div class="stat-label">மொழிபெயர்ப்பு பகுதிகள் (Chunks)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sticky Controls: Search & Topic Filter -->
+        <div class="controls-wrapper">
+            <div class="controls-card">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" class="search-input" placeholder="கேள்வி அல்லது முதன்மை வார்த்தைகளைத் தேடுக (e.g. தண்டனை, Reincarnation, Tilak, பாவம்)...">
+                </div>
+
+                <div class="filter-topics" id="topicFilters">
+                    <span class="topic-chip active" data-topic="all">அனைத்தும் (All Topics)</span>
+                    <span class="topic-chip" data-topic="definition">1. கர்மா வரைவிலக்கணம்</span>
+                    <span class="topic-chip" data-topic="control">2. கட்டுப்பாடும் இயக்கமும்</span>
+                    <span class="topic-chip" data-topic="justice">3. நீதி & பூர்வ ஜென்மம்</span>
+                    <span class="topic-chip" data-topic="construct">4. தத்துவார்த்த வடிவம்</span>
+                    <span class="topic-chip" data-topic="detachment">5. துன்பமும் மன விலக்கமும்</span>
+                    <span class="topic-chip" data-topic="atonement">6. பரிகாரமும் கட்டாயமும்</span>
+                    <span class="topic-chip" data-topic="collective">7. கூட்டுக் கர்மா</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- No Results Fallback -->
+        <div class="no-results" id="noResults">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <h3>தேடலுக்கு ஏற்ற கேள்விகள் கிடைக்கவில்லை</h3>
+            <p>வேறு வார்த்தைகளைப் பயன்படுத்தித் தேடிப் பார்க்கவும்.</p>
+        </div>
+
+        <!-- Topics & Questions Container -->
+        <div id="questionsContainer">
+
+            <!-- TOPIC 1 -->
+            <section class="topic-group" data-topic-category="definition">
+                <div class="topic-title">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                    <span>1. கர்மாவின் வரைவிலக்கணம் & எல்லை (Definition & Scope of Karma)</span>
+                </div>
+
+                <div class="questions-list">
+                    <!-- Question 1 -->
+                    <div class="question-card" data-keywords="கர்மா என்றால் என்ன செயல்கள் karma definition actions">
+                        <div class="card-header" onclick="toggleCard(this)">
+                            <div class="q-number">Q1</div>
+                            <div class="q-title-wrapper">
+                                <div class="q-title-ta">கர்மா என்றால் என்ன? எந்தெந்தச் செயல்கள் கர்மாவில் அடங்கும்?</div>
+                                <div class="q-title-en">What is Karma? Which actions qualify as Karma?</div>
+                                <div class="q-meta">
+                                    <span class="timestamp-badge"><i class="fa-solid fa-stopwatch"></i> 01:00 - 03:00</span>
+                                    <span class="category-tag">வரைவிலக்கணம்</span>
+                                </div>
+                            </div>
+                            <div class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-circle-info"></i> பின்னணி மற்றும் விளக்கம் (Context & Analysis)</div>
+                                <div class="context-box">
+                                    கூட்டத்தின் தொடக்கத்தில் எழுப்பப்பட்ட முதல் கேள்வி. மனிதன் செய்யும் அன்றாட செயல்கள், சிந்தனைகள் மற்றும் இயற்கையில் நடக்கும் இயக்கங்களில் எது கர்மா எனப்படுகிறது என்ற அடிப்படை வரைவிலக்கணத்தை ஆராய்கிறது.
+                                </div>
+                            </div>
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-quote-left"></i> உரையாடலின் பகுதி (Transcript Snippet)</div>
+                                <div class="transcript-snippet">"கர்மா என்றால் விஷயங்கள் கர்மா செய்யும் என்று கேட்டிருந்தோம்... கர்மா என்றால் விஷயங்கள் கர்மா செய்யும். இது இரண்டு கொஸ்டின்கள்..."</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TOPIC 2 -->
+            <section class="topic-group" data-topic-category="control">
+                <div class="topic-title">
+                    <i class="fa-solid fa-sliders"></i>
+                    <span>2. செயல் உரிமையும் கட்டுப்பாடும் (Control, Micro & Macro Dynamics)</span>
+                </div>
+
+                <div class="questions-list">
+                    <!-- Question 2 -->
+                    <div class="question-card" data-keywords="கட்டுப்பாடு control personal karma macro micro">
+                        <div class="card-header" onclick="toggleCard(this)">
+                            <div class="q-number">Q2</div>
+                            <div class="q-title-wrapper">
+                                <div class="q-title-ta">நாம் செய்யும் கர்மாவில் எது நம் நேரடி கட்டுப்பாட்டில் (Control) இருக்கிறது?</div>
+                                <div class="q-title-en">Which Karma is within our direct personal control compared to Macro and Micro processes?</div>
+                                <div class="q-meta">
+                                    <span class="timestamp-badge"><i class="fa-solid fa-stopwatch"></i> 03:00 - 05:00</span>
+                                    <span class="category-tag">கட்டுப்பாடு</span>
+                                </div>
+                            </div>
+                            <div class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-circle-info"></i> பின்னணி மற்றும் விளக்கம் (Context & Analysis)</div>
+                                <div class="context-box">
+                                    மனிதன் தான் நடப்பது, பேசுவது, சாப்பிடுவது, தொழில் செய்வது போன்ற நடுப்பகுதி (Middle Level) செயல்கள் மட்டுமே தன் கட்டுப்பாட்டில் இருப்பதாக நினைக்கிறான். ஆனால் நுண்ணிய (Micro) மற்றும் பிரபஞ்ச (Macro) அளவிலான செயல்கள் மனிதனின் கட்டுப்பாட்டைத் தாண்டியவை.
+                                </div>
+                            </div>
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-quote-left"></i> உரையாடலின் பகுதி (Transcript Snippet)</div>
+                                <div class="transcript-snippet">"எந்தக் கர்மாவை நம்முடைய கண்ட்ரோலில் இருப்பதாக நினைக்கிறோம்? நாம் நடத்துறோம்... படிக்கிறோம், பேசுகிறோம், பார்க்கிறோம், எழுதுகிறோம்... நமக்கு இந்த மிடில் லெவெல்ல இருக்கிற கர்மா மட்டும்தான் நாம் வந்து நடத்துறோம் அல்லது நம்முடைய கண்ட்ரோலில் இருக்கு..."</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="question-card" data-keywords="மைக்ரோ மேக்ரோ உடல் செரிமானம் சுனாமி சூரியன் micro macro internal body tsunami sun">
+                        <div class="card-header" onclick="toggleCard(this)">
+                            <div class="q-number">Q3</div>
+                            <div class="q-title-wrapper">
+                                <div class="q-title-ta">நமக்குத் தெரியாமல் மைக்ரோ & மேக்ரோ அளவில் நடக்கும் நிகழ்வுகளை (உடலின் உள் இயக்கம், இயற்கை சுனாமி/சூரிய ஜுவாலை) இயக்குவது எது/யார்?</div>
+                                <div class="q-title-en">What/Who controls micro-level biological activities and macro-level cosmic events beyond human awareness?</div>
+                                <div class="q-meta">
+                                    <span class="timestamp-badge"><i class="fa-solid fa-stopwatch"></i> 05:00 - 08:00</span>
+                                    <span class="category-tag">இயற்கை இயக்கம்</span>
+                                </div>
+                            </div>
+                            <div class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-circle-info"></i> பின்னணி மற்றும் விளக்கம் (Context & Analysis)</div>
+                                <div class="context-box">
+                                    உணவு சாப்பிட்ட பிறகு உள்ளே நடக்கும் இரசாயன மாற்றங்கள், இரத்தம் ஓடுவது, அல்லது கடலுக்கு அடியில் நிலக்கரி வைரம் ஆவது, சுனாமி வருவது, சூரியனில் வெடிப்பு ஏற்படுவது போன்றவை மனிதனின் விருப்பப்படி நடப்பதில்லை. இவற்றை இயக்குவது யார் என்ற வினா.
+                                </div>
+                            </div>
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-quote-left"></i> உரையாடலின் பகுதி (Transcript Snippet)</div>
+                                <div class="transcript-snippet">"அதை யார் செய்கிறான்? நமக்கு உள்ளே மைக்ரோலெவெல்ல நடக்கிறது... சாப்பிட்டேன் என்பது தெரியும், எச்சில் முழுங்கினேன் என்பது தெரியும். உள்ளே போய் அந்த சாப்பாட்டில் என்ன தொழில் நடக்கிறது? எனக்கு தெரியாது... சூரியனில் அந்த ஜோலைகள் வெடிக்கும், அதுவும் நம் கண்ட்ரோலில் இல்லை."</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TOPIC 3 -->
+            <section class="topic-group" data-topic-category="justice">
+                <div class="topic-title">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <span>3. நீதி, நியாயம் & பூர்வ ஜென்மம் (Divine Justice & Reincarnation)</span>
+                </div>
+
+                <div class="questions-list">
+                    <!-- Question 4 -->
+                    <div class="question-card" data-keywords="அறியாமல் குழந்தை பருவம் பூர்வ ஜென்மம் தண்டனை நியாயமா past life childhood innocent punishment">
+                        <div class="card-header" onclick="toggleCard(this)">
+                            <div class="q-number">Q4</div>
+                            <div class="q-title-wrapper">
+                                <div class="q-title-ta">நாம் அறியாமல், குழந்தைப் பருவத்திலோ அல்லது பூர்வ ஜென்மத்திலோ செய்த தவறுக்கு இப்போது துன்பம்/கர்மப்பலன் தண்டனையாகக் கிடைப்பது நியாயமா?</div>
+                                <div class="q-title-en">Is it fair to suffer now as Karma Phala for actions committed unknowingly in childhood or past lives?</div>
+                                <div class="q-meta">
+                                    <span class="timestamp-badge"><i class="fa-solid fa-stopwatch"></i> 21:00 - 23:00</span>
+                                    <span class="category-tag">நீதி & நியாயம்</span>
+                                </div>
+                            </div>
+                            <div class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-circle-info"></i> பின்னணி மற்றும் விளக்கம் (Context & Analysis)</div>
+                                <div class="context-box">
+                                    சின்ன வயதில் விளையாடும்போது விழுந்த காயம் 40 வயதில் பெரிய எலும்பு முறிவாக மாறும்போது அல்லது முந்தைய பிறவியில் செய்த தவறுக்கு இப்போது தண்டனை அனுபவிக்கும்போது, "எனக்கே தெரியாத தவறுக்கு தண்டனை தருவது நியாயமா?" என்ற கேள்வி எழுகிறது.
+                                </div>
+                            </div>
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-quote-left"></i> உரையாடலின் பகுதி (Transcript Snippet)</div>
+                                <div class="transcript-snippet">"எப்போது சின்ன வயதில் நான் செய்ததுக்கு இப்போது தண்டனை கிடைப்பது நியாயமா? அறியாமல் நான் இண்டென்ஷன் வைக்காமல் செய்ததற்கு... அதுக்கு இந்த தண்டனை கொடுப்பது நியாயமா?"</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="question-card" data-keywords="கடவுள் நீதி கர்ம கோட்பாடு அநியாயம் divine justice karma theory fair">
+                        <div class="card-header" onclick="toggleCard(this)">
+                            <div class="q-number">Q5</div>
+                            <div class="q-title-wrapper">
+                                <div class="q-title-ta">கடவுளின் நீதி / கர்மக் கோட்பாடு (Theory of Karma) நியாயமானதா அல்லது அநியாயமானதா?</div>
+                                <div class="q-title-en">Is Divine Justice / the Theory of Karma inherently fair or unfair?</div>
+                                <div class="q-meta">
+                                    <span class="timestamp-badge"><i class="fa-solid fa-stopwatch"></i> 22:30 - 24:00</span>
+                                    <span class="category-tag">கர்ம தியரி</span>
+                                </div>
+                            </div>
+                            <div class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-circle-info"></i> பின்னணி மற்றும் விளக்கம் (Context & Analysis)</div>
+                                <div class="context-box">
+                                    செய்த செயல் நினைவிலேயே இல்லாதபோது அல்லது வேறு பிறவியில் செய்ததற்கு தண்டனை என்றால், கடவுளின் இந்த அமைப்பு அநியாயமானது என்று தோன்றுமா என்ற தத்துவ விவாதம்.
+                                </div>
+                            </div>
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-quote-left"></i> உரையாடலின் பகுதி (Transcript Snippet)</div>
+                                <div class="transcript-snippet">"நான் அறியாமல் செய்ததுக்கு எனக்கு இது கிடைச்சது என்றால், கடவுள் செய்வது அநியாயம் என்று வரும்... கர்ம தியரி அநியாயம்..."</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="question-card" data-keywords="குழந்தை திறமை வயலின் கங்கா சசிதரன் நோய் மாற்றுத்திறனாளி prodigy violinist Ganga Sasidharan illness birth">
+                        <div class="card-header" onclick="toggleCard(this)">
+                            <div class="q-number">Q6</div>
+                            <div class="q-title-wrapper">
+                                <div class="q-title-ta">சிறிய வயதிலேயே அபார கலை திறமை கொண்ட குழந்தைகள் (உதா: 11 வயது வயலின் கலைஞர் கங்கா சசிதரன்) மற்றும் பிறவியிலேயே நோயோடு பிறக்கும் குழந்தைகளுக்குக் காரணம் பூர்வ ஜென்மக் கர்மாவா?</div>
+                                <div class="q-title-en">Are child prodigies (e.g. 11-yr violinist Ganga Sasidharan) or children born with congenital illnesses proof of past-life Karma?</div>
+                                <div class="q-meta">
+                                    <span class="timestamp-badge"><i class="fa-solid fa-stopwatch"></i> 30:00 - 32:00</span>
+                                    <span class="category-tag">பூர்வ ஜென்மம்</span>
+                                </div>
+                            </div>
+                            <div class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-circle-info"></i> பின்னணி மற்றும் விளக்கம் (Context & Analysis)</div>
+                                <div class="context-box">
+                                    11 வயதில் அசாத்தியமாக வயலின் வாசிக்கும் சிறுமி கங்கா சசிதரன் போன்ற உதாரணங்கள் மற்றும் பிறவியிலேயே நோயுடன் பிறக்கும் குழந்தைகள் - இதற்குக் காரணம் வாசனைகள் மற்றும் பூர்வ ஜென்மத் தொடர்ச்சிதானா என்பதை ஆராய்கிறது.
+                                </div>
+                            </div>
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-quote-left"></i> உரையாடலின் பகுதி (Transcript Snippet)</div>
+                                <div class="transcript-snippet">"கங்கா சசிதரன் வயலின் வாசிப்பதைப் பாருங்கள்... 11 வயது... இந்த திறமை யார் சொல்லிக்கொடுத்து வந்தது? நிச்சயமாக ஒரு ஜென்மம், மறுபடியும் பிறப்பு என்பதுதான் நம் நாட்டில் சொல்லி இருக்கிறார்கள்."</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TOPIC 4 -->
+            <section class="topic-group" data-topic-category="construct">
+                <div class="topic-title">
+                    <i class="fa-solid fa-brain"></i>
+                    <span>4. கர்மக் கோட்பாட்டின் தத்துவார்த்த வடிவம் (Psychological & Societal Construct)</span>
+                </div>
+
+                <div class="questions-list">
+                    <!-- Question 7 -->
+                    <div class="question-card" data-keywords="இயற்கை விதி மனிதன் உருவாக்கிய கோட்பாடு concept construct law of nature morality">
+                        <div class="card-header" onclick="toggleCard(this)">
+                            <div class="q-number">Q7</div>
+                            <div class="q-title-wrapper">
+                                <div class="q-title-ta">கர்மக் கோட்பாடு (Theory of Karma) என்பது உண்மையான ஒரு இயற்கை விதியா? அல்லது மனிதன் தன் கஷ்டங்களைச் சமாளிக்கவும் ஏற்றுக்கொள்ளவும் அமைக்கப்பட்ட ஒரு கருத்தாக்கமா (Concept)?</div>
+                                <div class="q-title-en">Is the Theory of Karma an intrinsic law of nature, or a psychological framework created by humans to cope with suffering?</div>
+                                <div class="q-meta">
+                                    <span class="timestamp-badge"><i class="fa-solid fa-stopwatch"></i> 27:00 - 29:30</span>
+                                    <span class="category-tag">தத்துவக் கோட்பாடு</span>
+                                </div>
+                            </div>
+                            <div class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-circle-info"></i> பின்னணி மற்றும் விளக்கம் (Context & Analysis)</div>
+                                <div class="context-box">
+                                    வாழ்க்கையில் துன்பங்கள் வரும்போது மனிதன் மனதளவில் உடைந்து போகாமல், அதை "என் கர்மா" என்று சமாதானம் செய்து ஏற்றுக்கொண்டு வாழ்வதற்காக மனித சமூகத்தால் உருவாக்கப்பட்ட ஒரு சமுதாயக் கோட்பாடா என்ற கேள்வி.
+                                </div>
+                            </div>
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-quote-left"></i> உரையாடலின் பகுதி (Transcript Snippet)</div>
+                                <div class="transcript-snippet">"கர்மா என்றது அமைக்கப்பட்ட ஒரு கோட்பாடா? மனிதனுக்கு வாழ்க்கையில் கஷ்டமே இல்லாமல் இருந்தா எதைப் பற்றியும் கவலைப்படாமல் வாழ்ந்துட்டு போவான்... கஷ்டம் வரும்போதுதான் கடவுளைத் தேடிப் போறான்..."</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 8 -->
+                    <div class="question-card" data-keywords="கடவுள் பயம் லீகல் மோரல் concept legal moral construct of God">
+                        <div class="card-header" onclick="toggleCard(this)">
+                            <div class="q-number">Q8</div>
+                            <div class="q-title-wrapper">
+                                <div class="q-title-ta">கடவுள் (God) என்னும் கருத்தாக்கம் மனிதர்கள் தவறு செய்யப் பயந்து, ஒழுக்கமாக வாழ உருவாக்கப்பட்ட ஒரு சமுதாயக் கோட்பாடா (Moral / Legal Concept)?</div>
+                                <div class="q-title-en">Is the concept of God merely a legal/moral construct created to enforce discipline and lawfulness in society?</div>
+                                <div class="q-meta">
+                                    <span class="timestamp-badge"><i class="fa-solid fa-stopwatch"></i> 29:00 - 30:00</span>
+                                    <span class="category-tag">கடவுள் கருத்தாக்கம்</span>
+                                </div>
+                            </div>
+                            <div class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-circle-info"></i> பின்னணி மற்றும் விளக்கம் (Context & Analysis)</div>
+                                <div class="context-box">
+                                    சட்டத்தில் இருந்து தப்பித்தாலும் கடவுளின் தண்டனையில் இருந்து தப்பிக்க முடியாது என்ற பயத்தை உருவாக்கி, மனிதன் ஒழுக்கமாக வாழ அமைக்கப்பட்ட ஒரு கருத்தாக்கமா கடவுள்?
+                                </div>
+                            </div>
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-quote-left"></i> உரையாடலின் பகுதி (Transcript Snippet)</div>
+                                <div class="transcript-snippet">"கடவுள் என்பது ஒரு கான்செப்ட்... நமக்கு ஒரு லீகலா, நல்லது செய்யவேண்டும் என்ற எண்ணத்தோட பயந்து வாழ்வதற்கு ஒரு கான்செப்ட்..."</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 9 -->
+                    <div class="question-card" data-keywords="மறுபிறவி பாவம் புண்ணியம் சித்தர்கள் சாஸ்திரங்கள் rebirth sin merit siddhas yogis">
+                        <div class="card-header" onclick="toggleCard(this)">
+                            <div class="q-number">Q9</div>
+                            <div class="q-title-wrapper">
+                                <div class="q-title-ta">மறுபிறவி (Punarjanma) மற்றும் பாவம்-புண்ணியம் என்பவை சமுதாயத்தைச் சீர்படுத்த யோகிகளாலும் சாஸ்திரங்களாலும் அமைக்கப்பட்ட ஒரு அமைப்பா?</div>
+                                <div class="q-title-en">Is the cycle of rebirth along with Sin and Merit a structured framework established by Yogis/Siddhas for social regulation?</div>
+                                <div class="q-meta">
+                                    <span class="timestamp-badge"><i class="fa-solid fa-stopwatch"></i> 32:00 - 33:00</span>
+                                    <span class="category-tag">மறுபிறவி & பாவம்</span>
+                                </div>
+                            </div>
+                            <div class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-circle-info"></i> பின்னணி மற்றும் விளக்கம் (Context & Analysis)</div>
+                                <div class="context-box">
+                                    சித்தர்கள் மற்றும் யோகிகள் தங்களின் வாழ்வியல் அனுபவங்கள் மூலம் சமுதாயத்தில் பாவம் செய்தால் தண்டனை கிடைக்கும் என்று மக்களை ஒழுங்குபடுத்திய அமைப்பா மறுபிறவி?
+                                </div>
+                            </div>
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-quote-left"></i> உரையாடலின் பகுதி (Transcript Snippet)</div>
+                                <div class="transcript-snippet">"இது ஒரு சமுதாயத்தைக் கொண்டிருப்பதற்கு பாவம், புண்ணியம்... பாவம் செய்தால் உனக்கு இந்த தண்டனை கிடைக்கும் என்று சமுதாயத்திற்காகச் சொல்லப்பட்டதா..."</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TOPIC 5 -->
+            <section class="topic-group" data-topic-category="detachment">
+                <div class="topic-title">
+                    <i class="fa-solid fa-spa"></i>
+                    <span>5. துன்பம், மன விலகல் & சாதனை (Enduring Suffering & Detachment)</span>
+                </div>
+
+                <div class="questions-list">
+                    <!-- Question 10 -->
+                    <div class="question-card" data-keywords="துன்பம் தண்டனை பால கங்காதர திலகர் கீதா ரஹசியம் சிறை சாதனை suffering detachment Tilak prison Gita Rahasya sadhana">
+                        <div class="card-header" onclick="toggleCard(this)">
+                            <div class="q-number">Q10</div>
+                            <div class="q-title-wrapper">
+                                <div class="q-title-ta">வாழ்க்கையில் துன்பங்கள் வரும்போது அதை 'தண்டனை' என்று அனுபவிக்காமல், (பால கங்காதர திலகர் சிறையில் கீதா ரஹசியம் எழுதியது போல) மனதளவில் விலகி நிற்க என்ன பயிற்சி செய்ய வேண்டும்?</div>
+                                <div class="q-title-en">When suffering strikes, how can one remain mentally detached without perceiving it as punishment (as Tilak did in prison)? What practice is required?</div>
+                                <div class="q-meta">
+                                    <span class="timestamp-badge"><i class="fa-solid fa-stopwatch"></i> 24:00 - 26:00</span>
+                                    <span class="category-tag">மன விலகல்</span>
+                                </div>
+                            </div>
+                            <div class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-circle-info"></i> பின்னணி மற்றும் விளக்கம் (Context & Analysis)</div>
+                                <div class="context-box">
+                                    பால கங்காதர திலகர் மண்டாலே சிறையில் கடுமையான தண்டனையில் இருந்தபோதும் கலங்காமல் 'கீதா ரஹசியம்' எழுதினார். தண்டனையை தண்டனையாக அனுபவிக்காமல் மனதளவில் சாட்சியாக விலகி நிற்க என்ன மனப்பயிற்சி (Sadhana) தேவை?
+                                </div>
+                            </div>
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-quote-left"></i> உரையாடலின் பகுதி (Transcript Snippet)</div>
+                                <div class="transcript-snippet">"மற்ற கைதிகள் புலம்பிக்கொண்டு அழுகிறான்... இவரும் அமைதியாக கீதா ரஹசியத்தை எழுதிக்கொண்டு இருக்கிறார்... துன்பத்தை தண்டனையாக அனுபவிக்காமல் விலகியிருக்க என்ன பயிற்சி செய்ய வேண்டும்?"</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TOPIC 6 -->
+            <section class="topic-group" data-topic-category="atonement">
+                <div class="topic-title">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <span>6. தானம், பரிகாரம் & கட்டாயச் செயல்கள் (Atonement, Rituals & Coerced Actions)</span>
+                </div>
+
+                <div class="questions-list">
+                    <!-- Question 11 -->
+                    <div class="question-card" data-keywords="தானம் தீர்த்த யாத்திரை பரிகாரம் மன உறுதி charity pilgrimages atonement mental strength">
+                        <div class="card-header" onclick="toggleCard(this)">
+                            <div class="q-number">Q11</div>
+                            <div class="q-title-wrapper">
+                                <div class="q-title-ta">தானம் செய்வது, தீர்த்த யாத்திரை செல்வது போன்றவற்றால் நாம் செய்த கர்மாவின் பலனை மாற்ற முடியுமா? அல்லது துன்பத்தைத் தாங்கும் மன உறுதியைப் பெற முடியுமா?</div>
+                                <div class="q-title-en">Can acts of charity or pilgrimages alter karmic consequences, or do they merely grant emotional strength to endure them?</div>
+                                <div class="q-meta">
+                                    <span class="timestamp-badge"><i class="fa-solid fa-stopwatch"></i> 33:30 - 35:00</span>
+                                    <span class="category-tag">தானம் & பரிகாரம்</span>
+                                </div>
+                            </div>
+                            <div class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-circle-info"></i> பின்னணி மற்றும் விளக்கம் (Context & Analysis)</div>
+                                <div class="context-box">
+                                    தானம் தருவது அல்லது புண்ணிய நதிகளுக்கு யாத்திரை செல்வது செய்த கர்மாவை அழித்துவிடுமா? அல்லது கர்மாவால் வரும் கஷ்டங்களைத் தாங்கக்கூடிய மனத் திண்மையையும் எமோஷனல் பலத்தையும் தருமா?
+                                </div>
+                            </div>
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-quote-left"></i> உரையாடலின் பகுதி (Transcript Snippet)</div>
+                                <div class="transcript-snippet">"கர்மா தீரியில் நம்பிக்கையிருந்தால் செய்ததற்கு பலன் கிடைக்கத்தான் செய்யும்... ஆனால் அதைத் தாங்கக்கூடிய எமோஷனல் பலன் தானம் செய்வதனாலையோ தீர்த்த யாத்திரை போவதனாலையோ கிடைக்கலாம்..."</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 12 -->
+                    <div class="question-card" data-keywords="துப்பாக்கி மிரட்டல் கட்டாய செயல் பாவம் யாருக்கு சேரும் gunpoint coercion threat forced action sin">
+                        <div class="card-header" onclick="toggleCard(this)">
+                            <div class="q-number">Q12</div>
+                            <div class="q-title-wrapper">
+                                <div class="q-title-ta">ஒருவர் தலையில் துப்பாக்கி வைத்து மிரட்டி கட்டாயப்படுத்தி ஒரு தவறான செயலைச் செய்ய வைத்தால் (Coerced Action), அதற்கு கர்மப்பலன்/பாவம் யாருக்குச் சேரும்?</div>
+                                <div class="q-title-en">If an individual is forced to perform an evil act at gunpoint or under threat of life, who incurs the karma/sin?</div>
+                                <div class="q-meta">
+                                    <span class="timestamp-badge"><i class="fa-solid fa-stopwatch"></i> 34:30 - 36:00</span>
+                                    <span class="category-tag">கட்டாயக் கர்மா</span>
+                                </div>
+                            </div>
+                            <div class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-circle-info"></i> பின்னணி மற்றும் விளக்கம் (Context & Analysis)</div>
+                                <div class="context-box">
+                                    மிரட்டலுக்குப் பயந்து விருப்பமில்லாமல் ஒரு தவறைச் செய்யும்போது, கர்ம விதியின்படி பலன் மிரட்டியவனுக்குச் செல்லுமா அல்லது செய்தவனுக்குச் செல்லுமா? தர்மமும் சட்டமும் இதை எவ்வாறு நோக்குகின்றன?
+                                </div>
+                            </div>
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-quote-left"></i> உரையாடலின் பகுதி (Transcript Snippet)</div>
+                                <div class="transcript-snippet">"தலையில் துப்பாக்கி வைத்து நம்மைத் தப்பு செய்யச் சொன்னால்... அதுக்கு என்ன ஆகும்? மனுநீதி சோழன் மாதிரி தன் பையனையே ரதத்தில் ஏற்றி கொல்வது போல தர்மம் ஒன்று... ஆனால் சட்டம் வேறு..."</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TOPIC 7 -->
+            <section class="topic-group" data-topic-category="collective">
+                <div class="topic-title">
+                    <i class="fa-solid fa-people-group"></i>
+                    <span>7. கூட்டுக் கர்மா & தலைமுறை வழி கர்மப்பலன் (Collective & Generational Karma)</span>
+                </div>
+
+                <div class="questions-list">
+                    <!-- Question 13 -->
+                    <div class="question-card" data-keywords="கூட்டு கர்மா போர் பேரழிவு நாடு collective karma war conflict natural disaster country">
+                        <div class="card-header" onclick="toggleCard(this)">
+                            <div class="q-number">Q13</div>
+                            <div class="q-title-wrapper">
+                                <div class="q-title-ta">கூட்டுக் கர்மா (Collective Karma): ஒரு நாட்டில் போரோ, பேரழிவோ அல்லது சமுதாய நெருக்கடியோ வரும்போது, அங்குள்ள மக்கள் அனைவரும் ஒரே மாதிரியான கர்மாவையா செய்திருப்பார்கள்?</div>
+                                <div class="q-title-en">Collective Karma: When a war, natural disaster, or geopolitical crisis engulfs a country, did all affected individuals share the same collective karma?</div>
+                                <div class="q-meta">
+                                    <span class="timestamp-badge"><i class="fa-solid fa-stopwatch"></i> 42:00 - 45:00</span>
+                                    <span class="category-tag">கூட்டுக் கர்மா</span>
+                                </div>
+                            </div>
+                            <div class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-circle-info"></i> பின்னணி மற்றும் விளக்கம் (Context & Analysis)</div>
+                                <div class="context-box">
+                                    ஒரு நாட்டில் யுத்தம் அல்லது நிலநடுக்கம் வரும்போது ஒரே நேரத்தில் ஆயிரக்கணக்கான மக்கள் பாதிக்கப்படுகிறார்கள். இவர்கள் அனைவரும் ஒரே மாதிரியான கர்ம வினையைக் கொண்டவர்களா?
+                                </div>
+                            </div>
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-quote-left"></i> உரையாடலின் பகுதி (Transcript Snippet)</div>
+                                <div class="transcript-snippet">"இப்போது ஒரு வார் வருகிறது என்று வைத்துக்கொள்ளுங்கள்... அங்கு இருக்கும் அனைவரும் ஒரே மாதிரி கர்மா செய்திருப்பார்கள் என்று சொல்ல முடியுமா... அந்த கலெக்டிவ் கர்மா..."</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 14 -->
+                    <div class="question-card" data-keywords="முன்னோர்கள் வரலாறு காலனி ஆதிக்கம் தலைமுறை generational karma ancestors colonial history Europe UK">
+                        <div class="card-header" onclick="toggleCard(this)">
+                            <div class="q-number">Q14</div>
+                            <div class="q-title-wrapper">
+                                <div class="q-title-ta">முன்னோர்கள் / முந்தைய தலைமுறையினர் செய்த வரலாற்றுத் தவறுகளுக்கு (Colonial Exploitation / Historical Atrocities), இன்றைய தலைமுறை மக்கள் கர்மப்பலனை அனுபவிப்பது நியாயமா?</div>
+                                <div class="q-title-en">Is it fair for current generations to suffer Karmic backlash for historic atrocities committed by past generations/ancestors?</div>
+                                <div class="q-meta">
+                                    <span class="timestamp-badge"><i class="fa-solid fa-stopwatch"></i> 43:00 - 44:30</span>
+                                    <span class="category-tag">தலைமுறை கர்மா</span>
+                                </div>
+                            </div>
+                            <div class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-circle-info"></i> பின்னணி மற்றும் விளக்கம் (Context & Analysis)</div>
+                                <div class="context-box">
+                                    முற்காலத்தில் ஐரோப்பிய நாடுகள் மற்ற நாடுகளைக் கொள்ளையடித்து சுரண்டியதன் விளைவாக, இன்று அந்நாடுகளில் ஏற்படும் சமுதாய மற்றும் பொருளாதாரக் குழப்பங்கள் கர்மப்பலனா? தற்போதைய சந்ததிக்கு இது நியாயமா?
+                                </div>
+                            </div>
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-quote-left"></i> உரையாடலின் பகுதி (Transcript Snippet)</div>
+                                <div class="transcript-snippet">"உலகத்தையெல்லாம் சுரண்டியிருக்கிறான்... இன்று அந்த கர்மா இந்த ஜெனரேஷனை அஃபெக்ட் பண்ணிக்கொண்டு இருக்கிறது. அந்த ஜெனரேஷன் செய்யவில்லை தவறு... ஆனால் பாதிக்கிறது..."</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 15 -->
+                    <div class="question-card" data-keywords="அப்பாவி கூட்டம் துப்பாக்கி சூடு நாக்பூர் collateral damage innocent bystander protest bullet">
+                        <div class="card-header" onclick="toggleCard(this)">
+                            <div class="q-number">Q15</div>
+                            <div class="q-title-wrapper">
+                                <div class="q-title-ta">அப்பாவி நபர்கள் தற்செயலாக ஒரு போராட்டத்தில் அல்லது கூட்டத்தில் இருக்கும்போது (Collateral Damage - உதா: நாக்பூர் போராட்டத்தில் ரப்பர் குண்டு பட்டு கண் இழந்த சம்பவம்), எதிர்பாராமல் துன்புறுவது எந்த மாதிரியான கர்மா?</div>
+                                <div class="q-title-en">When an innocent bystander is accidentally injured or paralyzed in a crowd/protest incident, what karmic factor explains such tragic collateral damage?</div>
+                                <div class="q-meta">
+                                    <span class="timestamp-badge"><i class="fa-solid fa-stopwatch"></i> 45:30 - 47:30</span>
+                                    <span class="category-tag">தற்செயல் கர்மா</span>
+                                </div>
+                            </div>
+                            <div class="toggle-icon"><i class="fa-solid fa-chevron-down"></i></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-circle-info"></i> பின்னணி மற்றும் விளக்கம் (Context & Analysis)</div>
+                                <div class="context-box">
+                                    நாக்பூர் போராட்டத்தில் கூட்டத்தில் நின்றிருந்த ஒரு இளைஞன் மீது ரப்பர் குண்டு பட்டு ஒரு கண் பார்வை பறிபோன சம்பவம் - எந்தத் தவறும் செய்யாத அப்பாவிக்கு எதிர்பாராமல் நடக்கும் இந்தக் கொடூரத்திற்கு எந்த கர்மா காரணம்?
+                                </div>
+                            </div>
+                            <div class="detail-block">
+                                <div class="detail-block-title"><i class="fa-solid fa-quote-left"></i> உரையாடலின் பகுதி (Transcript Snippet)</div>
+                                <div class="transcript-snippet">"நேற்று நம்ம பையன் ஒருத்தன் நாக்பூரில்... அந்த கட்டடத்தை இடிக்கும்போது கூட்டத்தில் நின்றான்... போலீஸ் சுட்டதுல ஒரு கண்ணு குருடா இருக்கு... இப்போது இதை என்ன செய்தான் கூட்டத்தில் இருந்தான்..."</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>கர்மா யோகா உபன்யாசம் - சந்திப்பு பதிவு அறிக்கை (Karma Yoga Meeting Questions & Topics Report)</p>
+            <p style="margin-top: 6px; opacity: 0.7;">Generated automatically from `KarmaYoga_Jul27_2026.m4a` audio transcription.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive JS Filter & Search -->
+    <script>
+        function toggleCard(headerElem) {
+            const card = headerElem.parentElement;
+            card.classList.toggle('open');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('searchInput');
+            const topicChips = document.querySelectorAll('.topic-chip');
+            const questionCards = document.querySelectorAll('.question-card');
+            const topicGroups = document.querySelectorAll('.topic-group');
+            const noResults = document.getElementById('noResults');
+
+            let currentTopic = 'all';
+            let currentSearchTerm = '';
+
+            function filterQuestions() {
+                let totalVisible = 0;
+
+                topicGroups.forEach(group => {
+                    const category = group.getAttribute('data-topic-category');
+                    const matchesCategory = (currentTopic === 'all' || currentTopic === category);
+                    let groupVisibleCount = 0;
+
+                    const cards = group.querySelectorAll('.question-card');
+                    cards.forEach(card => {
+                        const keywords = card.getAttribute('data-keywords').toLowerCase();
+                        const cardText = card.innerText.toLowerCase();
+                        const matchesSearch = currentSearchTerm === '' || keywords.includes(currentSearchTerm) || cardText.includes(currentSearchTerm);
+
+                        if (matchesCategory && matchesSearch) {
+                            card.style.display = 'block';
+                            groupVisibleCount++;
+                            totalVisible++;
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+
+                    if (groupVisibleCount > 0) {
+                        group.style.display = 'block';
+                    } else {
+                        group.style.display = 'none';
+                    }
+                });
+
+                if (totalVisible === 0) {
+                    noResults.style.display = 'block';
+                } else {
+                    noResults.style.display = 'none';
+                }
+            }
+
+            // Search input listener
+            searchInput.addEventListener('input', (e) => {
+                currentSearchTerm = e.target.value.toLowerCase().trim();
+                filterQuestions();
+            });
+
+            // Topic Chips filter listener
+            topicChips.forEach(chip => {
+                chip.addEventListener('click', () => {
+                    topicChips.forEach(c => c.classList.remove('active'));
+                    chip.classList.add('active');
+                    currentTopic = chip.getAttribute('data-topic');
+                    filterQuestions();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
