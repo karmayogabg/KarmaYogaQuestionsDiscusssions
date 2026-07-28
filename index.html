@@ -190,17 +190,6 @@
             box-shadow: none;
         }
 
-        .btn-github {
-            background: rgba(139, 92, 246, 0.2);
-            color: #c084fc;
-            border: 1px solid rgba(139, 92, 246, 0.4);
-            box-shadow: none;
-        }
-
-        .btn-github:hover {
-            background: rgba(139, 92, 246, 0.35);
-        }
-
         /* Controls: Search & Topic Filter */
         .controls-wrapper {
             position: sticky;
@@ -460,39 +449,54 @@
             margin-top: 5px;
         }
 
-        /* Modal Overlay for GitHub Token Settings */
-        .modal-overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(8px);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 2000;
-        }
-
-        .modal-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-highlight);
+        /* Transcript Viewer Section */
+        .transcript-repository-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
             border-radius: 20px;
-            width: 90%;
-            max-width: 520px;
-            padding: 28px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            padding: 25px;
+            backdrop-filter: blur(10px);
         }
 
-        .modal-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--accent-gold);
-            margin-bottom: 12px;
+        .transcript-selector-row {
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
         }
 
-        /* Notification */
+        .select-input {
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 10px 16px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            outline: none;
+            min-width: 320px;
+        }
+
+        .select-input:focus { border-color: var(--accent-gold); }
+
+        .transcript-content-viewer {
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px;
+            max-height: 600px;
+            overflow-y: auto;
+            font-family: 'Outfit', 'Noto Sans Tamil', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #e2e8f0;
+            white-space: pre-wrap;
+        }
+
         .notification {
             position: fixed;
             bottom: 25px;
@@ -542,8 +546,7 @@
                     </span>
                 </div>
                 <div class="tool-group">
-                    <button class="btn" onclick="saveData()"><i class="fa-solid fa-cloud-arrow-up"></i> Save to GitHub JSON</button>
-                    <button class="btn btn-github" onclick="openGitHubModal()"><i class="fa-brands fa-github"></i> GitHub PAT Settings</button>
+                    <button class="btn" onclick="saveData()"><i class="fa-solid fa-floppy-disk"></i> Save to Backend JSON & GitHub</button>
                     <button class="btn btn-secondary" onclick="resetData()"><i class="fa-solid fa-rotate-left"></i> Reset Defaults</button>
                 </div>
             </div>
@@ -599,26 +602,8 @@
 
     </main>
 
-    <!-- GitHub Token Modal -->
-    <div class="modal-overlay" id="githubModal">
-        <div class="modal-card">
-            <div class="modal-title"><i class="fa-brands fa-github"></i> GitHub Sync Settings</div>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 15px;">
-                To allow direct 1-click saving of answers to the <strong>KarmaYogaQuestionsDiscusssions</strong> GitHub repository, enter your GitHub Personal Access Token (PAT) below. It will be stored securely in your browser's LocalStorage.
-            </p>
-            <div class="form-group">
-                <label>GitHub Personal Access Token (PAT):</label>
-                <input type="password" id="ghTokenInput" class="search-input" style="padding-left: 14px;" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
-            </div>
-            <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px;">
-                <button class="btn btn-secondary" onclick="closeGitHubModal()">Cancel</button>
-                <button class="btn" onclick="saveGitHubToken()">Save Token</button>
-            </div>
-        </div>
-    </div>
-
     <div class="notification" id="notification">
-        <i class="fa-solid fa-circle-check"></i> JSON Saved!
+        <i class="fa-solid fa-circle-check"></i> JSON Data Saved Successfully!
     </div>
 
     <!-- Application Script -->
@@ -633,9 +618,6 @@
         let currentTopic = 'all';
         let currentSearchTerm = '';
         let fullTranscriptText = '';
-        const GH_REPO_OWNER = 'karmayogabg';
-        const GH_REPO_NAME = 'KarmaYogaQuestionsDiscusssions';
-        const GH_FILE_PATH = 'questions_data.json';
 
         async function initApp() {
             const savedState = localStorage.getItem('karma_yoga_questions_state');
@@ -778,7 +760,7 @@
                                         <label><i class="fa-solid fa-globe"></i> English Summary Answer:</label>
                                         <textarea class="answer-textarea" oninput="updateAnswer('${q.id}', 'en', this.value)" placeholder="Type English summary answer here...">${q.answer_en || ''}</textarea>
                                     </div>
-                                    <button class="save-card-btn" onclick="saveData()"><i class="fa-solid fa-cloud-arrow-up"></i> Save to GitHub JSON</button>
+                                    <button class="save-card-btn" onclick="saveData()"><i class="fa-solid fa-floppy-disk"></i> Save to Backend JSON & GitHub</button>
                                 </div>
                             </div>
                         </div>
@@ -830,7 +812,7 @@
         async function saveData() {
             autoSaveState();
             
-            // 1. Try Local Backend Server (/api/save)
+            // Post directly to local backend server (/api/save), which saves questions_data.json to disk AND git pushes to GitHub automatically!
             try {
                 const res = await fetch('/api/save', {
                     method: 'POST',
@@ -839,87 +821,14 @@
                 });
                 if (res.ok) {
                     const result = await res.json();
-                    showNotification('✓ ' + (result.message || 'Saved to local questions_data.json!'));
+                    showNotification('✓ ' + (result.message || 'Saved to questions_data.json and pushed to GitHub!'));
                     return;
                 }
-            } catch (e) {}
-
-            // 2. Try GitHub REST API Direct Save
-            const token = localStorage.getItem('gh_pat_token');
-            if (token) {
-                try {
-                    // Get current file sha
-                    const getUrl = `https://api.github.com/repos/${GH_REPO_OWNER}/${GH_REPO_NAME}/contents/${GH_FILE_PATH}`;
-                    const getRes = await fetch(getUrl, {
-                        headers: { 'Authorization': `Bearer ${token}` }
-                    });
-                    
-                    let sha = null;
-                    if (getRes.ok) {
-                        const getJson = await getRes.json();
-                        sha = getJson.sha;
-                    }
-
-                    // Unicode to Base64 helper
-                    const jsonString = JSON.stringify(appData, null, 2);
-                    const bytes = new TextEncoder().encode(jsonString);
-                    let binary = '';
-                    for (let i = 0; i < bytes.byteLength; i++) {
-                        binary += String.fromCharCode(bytes[i]);
-                    }
-                    const base64Content = btoa(binary);
-
-                    const putBody = {
-                        message: "Update answers and discussion statuses in questions_data.json via web manager",
-                        content: base64Content,
-                        branch: "main"
-                    };
-                    if (sha) putBody.sha = sha;
-
-                    const putRes = await fetch(getUrl, {
-                        method: 'PUT',
-                        headers: {
-                            'Authorization': `Bearer ${token}`,
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(putBody)
-                    });
-
-                    if (putRes.ok) {
-                        showNotification('✓ Updated & Committed questions_data.json directly on GitHub!');
-                        return;
-                    } else {
-                        const err = await putRes.json();
-                        console.error('GitHub API error:', err);
-                        showNotification('GitHub API Save Error: ' + (err.message || 'Check PAT permissions'));
-                        openGitHubModal();
-                        return;
-                    }
-                } catch (e) {
-                    console.error('GitHub REST API failed:', e);
-                }
-            } else {
-                openGitHubModal();
+            } catch (e) {
+                console.warn('Backend API save endpoint unavailable:', e);
             }
-        }
 
-        function openGitHubModal() {
-            document.getElementById('ghTokenInput').value = localStorage.getItem('gh_pat_token') || '';
-            document.getElementById('githubModal').style.display = 'flex';
-        }
-
-        function closeGitHubModal() {
-            document.getElementById('githubModal').style.display = 'none';
-        }
-
-        function saveGitHubToken() {
-            const token = document.getElementById('ghTokenInput').value.trim();
-            if (token) {
-                localStorage.setItem('gh_pat_token', token);
-                showNotification('GitHub Personal Access Token saved!');
-                closeGitHubModal();
-                saveData();
-            }
+            showNotification('Saved to LocalStorage!');
         }
 
         function resetData() {
