@@ -1,7 +1,20 @@
 import json, os
+from master_data import ensure_valid_data
 
-with open('questions_data.json', 'r', encoding='utf-8') as f:
-    q_data_obj = json.load(f)
+if os.path.exists('questions_data.json'):
+    try:
+        with open('questions_data.json', 'r', encoding='utf-8') as f:
+            q_data_obj = json.load(f)
+    except Exception:
+        q_data_obj = {}
+else:
+    q_data_obj = {}
+
+q_data_obj = ensure_valid_data(q_data_obj)
+
+# Ensure disk version is clean & populated as well
+with open('questions_data.json', 'w', encoding='utf-8') as f:
+    json.dump(q_data_obj, f, ensure_ascii=False, indent=2)
 
 with open('Karma Yoga Meeting Recording (Jul 27, 2026).txt', 'r', encoding='utf-8') as f:
     t_text = f.read()
@@ -629,35 +642,46 @@ html_code = f"""<!DOCTYPE html>
         let fullTranscriptText = '';
 
         async function initApp() {{
+            let fetchedData = embeddedDefaultJSON;
+            try {{
+                const response = await fetch('questions_data.json');
+                if (response.ok) {{
+                    const fetched = await response.json();
+                    if (fetched && fetched.questions && fetched.questions.length > 0) {{
+                        fetchedData = fetched;
+                    }}
+                }}
+            }} catch (e) {{
+                console.warn('Fetch failed, using embedded JSON fallback:', e);
+            }}
+
             const savedState = localStorage.getItem('karma_yoga_questions_state');
             if (savedState) {{
                 try {{
                     const parsed = JSON.parse(savedState);
-                    if (parsed && parsed.questions && parsed.questions.length > 0) {{
-                        appData = parsed;
+                    if (parsed && parsed.questions) {{
+                        const savedMap = {{}};
+                        parsed.questions.forEach(q => savedMap[q.id] = q);
+                        
+                        const mergedQuestions = fetchedData.questions.map(q => {{
+                            if (savedMap[q.id]) {{
+                                return {{
+                                    ...q,
+                                    answer_ta: savedMap[q.id].answer_ta || q.answer_ta,
+                                    answer_en: savedMap[q.id].answer_en || q.answer_en,
+                                    is_discussed: savedMap[q.id].is_discussed !== undefined ? savedMap[q.id].is_discussed : q.is_discussed
+                                }};
+                            }}
+                            return q;
+                        }});
+                        fetchedData.questions = mergedQuestions;
                     }}
                 }} catch (e) {{
                     console.error('LocalStorage parse error:', e);
                 }}
             }}
 
-            if (!appData || !appData.questions || appData.questions.length === 0) {{
-                try {{
-                    const response = await fetch('questions_data.json');
-                    if (response.ok) {{
-                        const fetched = await response.json();
-                        if (fetched && fetched.questions && fetched.questions.length > 0) {{
-                            appData = fetched;
-                        }}
-                    }}
-                }} catch (e) {{
-                    console.warn('Fetch failed, using embedded JSON fallback:', e);
-                }}
-            }}
-
-            if (!appData || !appData.questions || appData.questions.length === 0) {{
-                appData = embeddedDefaultJSON;
-            }}
+            appData = fetchedData;
 
             renderFilters();
             renderQuestions();

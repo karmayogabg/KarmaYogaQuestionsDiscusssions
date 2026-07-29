@@ -1,48 +1,72 @@
 ---
 name: extractKYTransQues
-description: Batch chunk, transcribe, and extract questions & topics from Tamil Karma Yoga audio recordings (.m4a/.wav/.mp3) OR direct transcript files (.txt/.docx/.pdf/.md), compiling structured JSON data, plain transcript files, and interactive HTML discussion reports.
+description: Batch chunk, transcribe, and extract questions & topics from Tamil Karma Yoga audio recordings (.m4a/.wav/.mp3/.mp4/.aac/.flac/.ogg/.wma) OR direct transcript files (.txt/.docx/.pdf/.md) from folder "transcripts to process" or "transcription to process", moving processed files to "processed transcripts" and displaying a formatted CLI table (Question Number | Which High level Section Mapped | Question details).
 ---
 
 # Extract Karma Yoga Transcript & Questions Skill (`extractKYTransQues`)
 
-This skill automates the full pipeline for processing Tamil Karma Yoga / Bhagavad Gita lecture recordings or pre-extracted transcripts:
+This skill automates the batch pipeline for processing Tamil/English Karma Yoga lecture recordings or pre-extracted transcripts:
 
-## 🔀 Supported Input Modes
+## 🔀 Workflow & Input Modes
 
-1. **Mode A: Audio File Input (`--audio "/path/to/file.m4a"`)**
-   * Segments audio into 3-minute WAV chunks via `ffmpeg`.
-   * Runs local `whisper-cli` (`ggml-medium.bin`) parallel speech-to-text.
-   * Compiles timestamped plain text and markdown transcript files.
-   * Extracts questions, topics, context snippets, and updates `questions_data.json` & `index.html`.
+1. **Batch Mode (Default)**:
+   * Scans input folders `transcripts to process/` and `transcription to process/` for all **audio files** (`.m4a`, `.wav`, `.mp3`, `.mp4`, `.aac`, `.flac`, `.ogg`, `.wma`) and **transcript text files** (`.txt`, `.docx`, `.pdf`, `.md`).
+   * For **audio files**:
+     - Segments audio into 3-minute WAV chunks via `ffmpeg`.
+     - Runs local `whisper-cli` (`ggml-medium.bin`) parallel speech-to-text.
+     - Saves combined transcript text into `transcripts/<base_name>.txt`.
+   * For **transcript files**:
+     - Direct text extraction (`.txt`, `.docx`, `.pdf`).
+   * Extracts questions, generates bilingual Tamil & English entries (`question_ta`, `question_en`), and maps them to high-level sections.
+   * **Terminal Table Output**: Displays a CLI Table for every processed file with:
+     `| Question Number | Which High level Section Mapped | Question details |`
+   * **Database & UI Update**: Updates `questions_data.json` & regenerates `index.html`.
+   * **Auto-Move**: Automatically moves processed audio and transcript files into `processed transcripts/`.
 
-2. **Mode B: Direct Transcript File Input (`--transcript "/path/to/transcript.docx"`)**
-   * Accepts pre-extracted text files (`.txt`, `.md`), Word documents (`.docx`), or PDF files (`.pdf`).
-   * Extracts the full transcript text directly without needing audio re-transcription.
-   * Saves the plain text in the `transcripts/` repository.
-   * Extracts discussion questions, categorizes topics, and updates `questions_data.json` & `index.html`.
+2. **Single File Audio Mode (`--audio "/path/to/recording.m4a"`)**:
+   * Processes a specific audio file, transcribes via Whisper CLI, displays CLI table, and moves the audio file to `processed transcripts/`.
+
+3. **Single File Direct Transcript Mode (`--transcript "/path/to/transcript.pdf"`)**:
+   * Accepts text files (`.txt`, `.md`), Word documents (`.docx`), or PDF files (`.pdf`), displays CLI table, updates `questions_data.json` & `index.html`, and moves the file to `processed transcripts/`.
 
 ---
 
 ## ⚡ Execution Commands
 
-### Run with Audio File:
+### Batch Process All Files in Folder:
+```bash
+python3 /home/sabrisatharamanathan/.gemini/antigravity-cli/skills/extractKYTransQues/scripts/process_audio.py
+```
+
+### Specify Custom Folders:
+```bash
+python3 /home/sabrisatharamanathan/.gemini/antigravity-cli/skills/extractKYTransQues/scripts/process_audio.py --folder "/path/to/transcription to process" --processed-dir "/path/to/processed transcripts"
+```
+
+### Run for Single Audio File:
 ```bash
 python3 /home/sabrisatharamanathan/.gemini/antigravity-cli/skills/extractKYTransQues/scripts/process_audio.py --audio "/path/to/recording.m4a"
 ```
 
-### Run with Direct Transcript File (.txt / .docx / .pdf):
+### Run for Single Transcript File (.txt / .docx / .pdf):
 ```bash
-python3 /home/sabrisatharamanathan/.gemini/antigravity-cli/skills/extractKYTransQues/scripts/process_audio.py --transcript "/path/to/meeting_transcript.docx"
+python3 /home/sabrisatharamanathan/.gemini/antigravity-cli/skills/extractKYTransQues/scripts/process_audio.py --transcript "/path/to/meeting_transcript.pdf"
 ```
 
 ---
 
-## 📄 Generated & Updated Deliverables
+## 📊 Terminal Output Table Format
 
-1. **Plain Text Transcript**:
-   * `transcripts/<Audio_Or_Transcript_Name>.txt`
-   * `<Audio_Or_Transcript_Name>.txt`
-2. **JSON Backend Database**:
-   * `questions_data.json` (Updated with new transcript entry, questions, and topics)
-3. **Interactive Web Application**:
-   * `index.html` (Rebuilt with updated JSON & full transcript text viewable in Transcripts Repository tab)
+During execution, the skill displays a clean table in the terminal:
+
+```text
++-------------------+------------------------------------------+----------------------------------------------------+
+| Question Number   | Which High level Section Mapped          | Question details                                   |
++-------------------+------------------------------------------+----------------------------------------------------+
+| Q16               | 3. Divine Justice & Reincarnation        | Why don't we remember our past lives if karma      |
+|                   |                                          | depends on them?                                   |
++-------------------+------------------------------------------+----------------------------------------------------+
+| Q17               | 3. Divine Justice & Reincarnation        | Is it fair to hold someone accountable for actions |
+|                   |                                          | from a previous life that they cannot remember?    |
++-------------------+------------------------------------------+----------------------------------------------------+
+```
