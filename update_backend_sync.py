@@ -16,11 +16,34 @@ q_data_obj = ensure_valid_data(q_data_obj)
 with open('questions_data.json', 'w', encoding='utf-8') as f:
     json.dump(q_data_obj, f, ensure_ascii=False, indent=2)
 
-with open('Karma Yoga Meeting Recording (Jul 27, 2026).txt', 'r', encoding='utf-8') as f:
-    t_text = f.read()
+embedded_transcripts_map = {}
+transcripts_dir = os.path.join(os.path.dirname(__file__) or '.', "transcripts")
+
+if os.path.exists(transcripts_dir):
+    for f_name in sorted(os.listdir(transcripts_dir)):
+        if f_name.endswith('.txt') and not f_name.startswith('.'):
+            t_path = os.path.join(transcripts_dir, f_name)
+            try:
+                with open(t_path, 'r', encoding='utf-8', errors='ignore') as tf:
+                    txt_content = tf.read()
+                rel_file = f"transcripts/{f_name}"
+                embedded_transcripts_map[rel_file] = txt_content
+                embedded_transcripts_map[f_name] = txt_content
+            except Exception:
+                pass
+
+# Ensure every transcript entry in q_data_obj has its text property populated
+t_list = q_data_obj.get("transcripts", [])
+for t in t_list:
+    f_rel = t.get("file", "")
+    f_base = os.path.basename(f_rel)
+    if f_rel in embedded_transcripts_map:
+        t["text"] = embedded_transcripts_map[f_rel]
+    elif f_base in embedded_transcripts_map:
+        t["text"] = embedded_transcripts_map[f_base]
 
 json_q = json.dumps(q_data_obj, ensure_ascii=False, indent=2)
-json_t = json.dumps(t_text, ensure_ascii=False)
+json_t_map = json.dumps(embedded_transcripts_map, ensure_ascii=False, indent=2)
 
 html_code = f"""<!DOCTYPE html>
 <html lang="ta">
@@ -634,7 +657,7 @@ html_code = f"""<!DOCTYPE html>
     <script>
         // Embedded Offline Fallbacks
         const embeddedDefaultJSON = {json_q};
-        const embeddedDefaultTranscript = {json_t};
+        const embeddedTranscriptsMap = {json_t_map};
 
         let appData = null;
         let currentTopic = 'all';
@@ -887,10 +910,25 @@ html_code = f"""<!DOCTYPE html>
 
         async function loadSelectedTranscript() {{
             const select = document.getElementById('transcriptSelect');
-            const file = select.value || 'Karma Yoga Meeting Recording (Jul 27, 2026).txt';
+            const file = select.value || '';
             const viewer = document.getElementById('transcriptViewer');
 
-            viewer.innerHTML = 'உரைப்பதிவு ஏற்றப்படுகிறது... (Loading transcript text...)';
+            viewer.innerText = 'உரைப்பதிவு ஏற்றப்படுகிறது... (Loading transcript text...)';
+
+            if (appData && appData.transcripts) {{
+                const found = appData.transcripts.find(t => t.file === file || t.id === file || t.file === 'transcripts/' + file);
+                if (found && found.text && found.text.trim() !== '') {{
+                    fullTranscriptText = found.text;
+                    viewer.innerText = fullTranscriptText;
+                    return;
+                }}
+            }}
+
+            if (typeof embeddedTranscriptsMap !== 'undefined' && (embeddedTranscriptsMap[file] || embeddedTranscriptsMap['transcripts/' + file])) {{
+                fullTranscriptText = embeddedTranscriptsMap[file] || embeddedTranscriptsMap['transcripts/' + file];
+                viewer.innerText = fullTranscriptText;
+                return;
+            }}
 
             try {{
                 const res = await fetch(file);
@@ -900,10 +938,10 @@ html_code = f"""<!DOCTYPE html>
                     return;
                 }}
             }} catch (e) {{
-                console.warn('Fetch failed, using embedded fallback transcript:', e);
+                console.warn('Fetch failed for transcript:', e);
             }}
 
-            fullTranscriptText = embeddedDefaultTranscript;
+            fullTranscriptText = 'உரைப்பதிவு கிடைக்கவில்லை (Transcript text unavailable).';
             viewer.innerText = fullTranscriptText;
         }}
 

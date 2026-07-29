@@ -23,6 +23,9 @@ This skill automates the batch pipeline for processing Tamil/English Karma Yoga 
 5. **File Movement & Repository Cleanliness**:
    * Saves compiled transcript `.txt` files in `transcripts/` ONLY (never in the root folder).
    * Moves processed input files into `processed transcripts/`.
+6. **Transcript Repository Viewer Isolation**:
+   * Embeds all transcript texts into `embeddedTranscriptsMap` and `appData.transcripts`.
+   * Selecting a transcript in the Web UI dropdown displays ONLY its own specific text without hardcoded fallback overlaps.
 
 ---
 
