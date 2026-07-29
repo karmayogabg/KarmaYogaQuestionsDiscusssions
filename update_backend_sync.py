@@ -272,39 +272,69 @@ html_code = f"""<!DOCTYPE html>
         }}
         .search-input:focus {{ border-color: var(--accent-gold); }}
 
-        .filter-topics {{ display: flex; flex-wrap: wrap; gap: 8px; }}
+        .filter-topics {{ display: flex; flex-wrap: wrap; gap: 10px; }}
         .topic-chip {{
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--border-color);
             color: var(--text-secondary);
-            padding: 7px 15px;
-            border-radius: 50px;
-            font-size: 0.85rem;
+            padding: 8px 16px;
+            border-radius: 14px;
+            font-size: 0.88rem;
             cursor: pointer;
             user-select: none;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2px;
+            transition: all 0.2s ease;
+        }}
+        .topic-chip .chip-ta {{
+            font-weight: 600;
+            line-height: 1.2;
+        }}
+        .topic-chip .chip-en {{
+            font-size: 0.78rem;
+            opacity: 0.85;
+            font-weight: 400;
+            line-height: 1.1;
         }}
         .topic-chip.active {{
             background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-orange) 100%);
             color: #000;
-            font-weight: 600;
             border-color: transparent;
+        }}
+        .topic-chip.active .chip-en {{
+            color: #111;
+            opacity: 0.9;
         }}
 
         /* Question Cards & Topic Sections */
         .topic-group {{ margin-bottom: 40px; }}
-        .topic-title {{
+        .topic-title-wrapper {{
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(245, 158, 11, 0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }}
+        .topic-title-ta {{
             display: flex;
             align-items: center;
             gap: 12px;
             font-size: 1.35rem;
             font-weight: 600;
             color: var(--accent-gold-light);
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid rgba(245, 158, 11, 0.2);
+        }}
+        .topic-title-en {{
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-left: 48px;
+            opacity: 0.9;
         }}
 
-        .topic-title i {{
+        .topic-title-ta i {{
             background: rgba(245, 158, 11, 0.15);
             width: 36px;
             height: 36px;
@@ -312,6 +342,7 @@ html_code = f"""<!DOCTYPE html>
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-shrink: 0;
         }}
 
         .questions-list {{ display: flex; flex-direction: column; gap: 20px; }}
@@ -728,10 +759,18 @@ html_code = f"""<!DOCTYPE html>
 
         function renderFilters() {{
             const filterContainer = document.getElementById('topicFilters');
-            let html = `<span class="topic-chip active" data-topic="all" onclick="filterByTopic('all', this)">அனைத்தும் (All Topics)</span>`;
+            let html = `
+                <span class="topic-chip active" data-topic="all" onclick="filterByTopic('all', this)">
+                    <div class="chip-ta">அனைத்தும்</div>
+                    <div class="chip-en">All Topics</div>
+                </span>`;
             if (appData && appData.topics) {{
                 appData.topics.forEach(t => {{
-                    html += `<span class="topic-chip" data-topic="${{t.id}}" onclick="filterByTopic('${{t.id}}', this)">${{t.title_ta}}</span>`;
+                    html += `
+                    <span class="topic-chip" data-topic="${{t.id}}" onclick="filterByTopic('${{t.id}}', this)">
+                        <div class="chip-ta">${{t.title_ta}}</div>
+                        <div class="chip-en">${{t.title_en}}</div>
+                    </span>`;
                 }});
             }}
             filterContainer.innerHTML = html;
@@ -766,9 +805,11 @@ html_code = f"""<!DOCTYPE html>
 
                 html += `
                 <section class="topic-group" data-topic="${{topic.id}}">
-                    <div class="topic-title">
-                        <i class="fa-solid ${{topic.icon}}"></i>
-                        <span>${{topic.title_ta}} (${{topic.title_en}})</span>
+                    <div class="topic-title-wrapper">
+                        <div class="topic-title-ta">
+                            <i class="fa-solid ${{topic.icon}}"></i> ${{topic.title_ta}}
+                        </div>
+                        <div class="topic-title-en">${{topic.title_en}}</div>
                     </div>
                     <div class="questions-list">
                 `;

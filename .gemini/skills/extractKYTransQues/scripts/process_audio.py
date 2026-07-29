@@ -35,13 +35,13 @@ DEFAULT_INPUT_DIRS = [
 DEFAULT_PROCESSED_DIR = os.path.join(WORKSPACE_DIR, "processed transcripts")
 
 TOPIC_TITLES = {
-    "definition": "1. Definition & Scope of Karma",
-    "control": "2. Control, Micro & Macro Dynamics",
-    "justice": "3. Divine Justice & Reincarnation",
-    "construct": "4. Psychological & Societal Construct",
-    "detachment": "5. Enduring Suffering & Detachment",
-    "atonement": "6. Atonement, Rituals & Coerced Actions",
-    "collective": "7. Collective & Generational Karma"
+    "definition": "1. கர்மாவின் வரைவிலக்கணம் & எல்லை (Definition & Scope of Karma)",
+    "control": "2. செயல் உரிமையும் கட்டுப்பாடும் (Control, Micro & Macro Dynamics)",
+    "justice": "3. நீதி, நியாயம் & பூர்வ ஜென்மம் (Divine Justice & Reincarnation)",
+    "construct": "4. கர்மக் கோட்பாட்டின் தத்துவார்த்த வடிவம் (Psychological & Societal Construct)",
+    "detachment": "5. துன்பம், மன விலகல் & சாதனை (Enduring Suffering & Detachment)",
+    "atonement": "6. தானம், பரிகாரம் & கட்டாயச் செயல்கள் (Atonement, Rituals & Coerced Actions)",
+    "collective": "7. கூட்டுக் கர்மா & தலைமுறை வழி கர்மப்பலன் (Collective & Generational Karma)"
 }
 
 def map_question_to_topic(q_text):
