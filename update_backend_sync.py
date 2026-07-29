@@ -925,11 +925,4 @@ html_code = f"""<!DOCTYPE html>
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(html_code)
 
-with open('index.html', 'w', encoding='utf-8') as f:
-    f.write(html_code)
-
-artifact_path = '/home/sabrisatharamanathan/.gemini/antigravity-cli/brain/f1e6c23f-d0aa-47df-8f98-22cad29b7277/index.html'
-with open(artifact_path, 'w', encoding='utf-8') as f:
-    f.write(html_code)
-
-print('Updated index.html, index.html, and artifact for seamless backend save!')
+print('Updated index.html with embedded questions_data.json!')
